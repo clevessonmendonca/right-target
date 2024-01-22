@@ -1,5 +1,5 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link'
+import React from 'react'
 
 export const Footer = () => {
   return (
@@ -25,26 +25,17 @@ export const Footer = () => {
               </h2>
               <ul className="font-medium text-gray-500 dark:text-gray-400">
                 <li className="mb-4">
-                  <Link
-                    href="/"
-                    className="hover:underline"
-                  >
+                  <Link href="/" className="hover:underline">
                     Services
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link
-                    href="/"
-                    className="hover:underline"
-                  >
+                  <Link href="/" className="hover:underline">
                     About
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link
-                    href="/"
-                    className="hover:underline"
-                  >
+                  <Link href="/" className="hover:underline">
                     Testimonials
                   </Link>
                 </li>
@@ -95,7 +86,7 @@ export const Footer = () => {
         <hr className="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
-            {Date.now().toString()} 
+            {Date.now().toString()}
             <a href="/" className="hover:underline">
               Work for Immigrants
             </a>
@@ -114,9 +105,9 @@ export const Footer = () => {
                 viewBox="0 0 8 19"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
               <span className="sr-only">Facebook page</span>
@@ -125,5 +116,5 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
