@@ -1,12 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { PhoneIcon } from "lucide-react";
-import Image from "next/image";
-import React from "react";
+import { Button } from '@/components/ui/button'
+import Image from 'next/image'
+import React from 'react'
 
 export const HeroSection = () => {
   return (
     <div className="mx-auto mt-8 flex max-w-screen-xl flex-col items-center justify-center gap-8 p-4 text-center md:flex-row md:gap-4 md:text-left">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col items-center gap-4 md:items-start">
         <h1 className="max-w-md text-4xl font-bold tracking-tight md:text-5xl">
           Impeccable Cleaning Services Tailored for You.
         </h1>
@@ -33,5 +32,5 @@ export const HeroSection = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}

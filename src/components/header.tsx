@@ -1,20 +1,31 @@
-import Link from "next/link";
-import React from "react";
-import { Card } from "./ui/card";
-import { Button } from "./ui/button";
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
-import { Separator } from "./ui/separator";
+import Link from 'next/link'
+import { Card } from './ui/card'
+import { Button } from './ui/button'
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from './ui/sheet'
+import Image from 'next/image'
 
 export const Header = () => {
   return (
     <header className="mx-auto w-full max-w-screen-2xl">
-      <Card className="flex items-center justify-between border-none p-[1.875rem]">
+      <Card className="flex items-center justify-between border-none px-[1.875rem] py-[1.25rem]">
         <Link href="/">
-          <h1 className="text-xl font-bold tracking-tighter">
+          <Image
+            sizes="100vw"
+            width={0}
+            className="h-auto w-full max-w-64 px-5"
+            height={0}
+            src="/logo.png"
+            alt=""
+          />
+          {/* <h1 className="text-xl font-bold tracking-tighter">
             Work for Immigration
-          </h1>
+          </h1> */}
         </Link>
         <div className="flex items-center gap-6">
+          <Link href="/contact" className="hidden sm:block md:hidden">
+            <Button>Contact us</Button>
+          </Link>
+
           <Sheet>
             <SheetTrigger className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 md:hidden">
               <span className="sr-only">Open main menu</span>
@@ -22,13 +33,13 @@ export const Header = () => {
                 className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
                 aria-hidden="true"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                 />
               </svg>
@@ -65,10 +76,6 @@ export const Header = () => {
             </SheetContent>
           </Sheet>
 
-          <Link href="/contact" className="md:hidden">
-            <Button>Contact us</Button>
-          </Link>
-
           <nav className="hidden items-center gap-6 md:flex">
             <Link href="/about" className="text-gray-500 hover:text-gray-900">
               About
@@ -92,5 +99,5 @@ export const Header = () => {
         </div>
       </Card>
     </header>
-  );
-};
+  )
+}

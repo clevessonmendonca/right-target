@@ -6,9 +6,12 @@ import {
   PartyPopperIcon,
   SparklesIcon,
   UserCheck,
-} from "lucide-react";
-import { HeroSection } from "./components/hero-section";
-import { Card } from "@/components/ui/card";
+} from 'lucide-react'
+import { HeroSection } from './components/hero-section'
+import { Card } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { CleaningForm } from './components/cleaning-form'
+import { TestimonialsCarousel } from './components/testimonials-carousel'
 
 export default function Home() {
   return (
@@ -30,9 +33,9 @@ export default function Home() {
       </div>
 
       <div className="mx-auto mt-28 flex flex-col items-center">
-        <h2 className="text-2xl font-bold tracking-tight ">Our Services</h2>
+        <h2 className="text-3xl font-bold tracking-tight ">Our Services</h2>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 px-4 py-12">
+        <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-center gap-4 px-4 py-12">
           <Card className="flex h-72 max-w-sm flex-col items-center gap-2 px-8 py-6 text-center">
             <CalendarDaysIcon />
             <h3 className="mt-2 text-xl font-medium">
@@ -85,23 +88,20 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div>
-        <div>
-          <Image
-            sizes="100vw"
-            width={0}
-            className="h-auto w-full px-5"
-            height={0}
-            src="/women-cleaning.jpg"
-            alt=""
-          />
+      <div className="bg-primary">
+        <div className="mx-auto w-full max-w-screen-xl px-4 py-12">
+          <Badge className="text-white">Testimonials</Badge>
+          <h2 className="text-3xl font-bold tracking-tight ">
+            Our Clients <span className="text-white">Reviews</span>
+          </h2>
 
-          <div>
-            <span></span>
-            <h2></h2>
-          </div>
+          <TestimonialsCarousel />
         </div>
-      </div> */}
+      </div>
+
+      <div className="my-16 px-4">
+        <CleaningForm />
+      </div>
     </div>
-  );
+  )
 }
