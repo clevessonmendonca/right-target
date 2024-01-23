@@ -12,7 +12,7 @@ export const Header = () => {
           <Image
             sizes="100vw"
             width={0}
-            className="h-auto w-full max-w-64 px-5"
+            className="h-auto w-full  max-w-60 px-5 md:max-w-64"
             height={0}
             src="/logo.png"
             alt=""
