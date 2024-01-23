@@ -1,25 +1,23 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import Head from "next/head";
-import { GoogleTagManager } from "@next/third-parties/google";
-import Script from "next/script";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import Script from 'next/script'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Work for Immigration",
+  title: 'Work for Immigration',
   description:
-    "Professional and reliable residential cleaning service. Transform your home with Work for Immigration.",
-};
+    'Professional and reliable residential cleaning service. Transform your home with Work for Immigration.',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
@@ -46,5 +44,5 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-  );
+  )
 }
