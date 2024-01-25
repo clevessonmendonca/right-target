@@ -14,11 +14,11 @@ export const Header = () => {
             width={0}
             className="h-auto w-full  max-w-60 px-5 md:max-w-64"
             height={0}
-            src="/logo.png"
-            alt=""
+            src="/logo.jpeg"
+            alt="Right Target Logo"
           />
           {/* <h1 className="text-xl font-bold tracking-tighter">
-            Work for Immigration
+            Right Target
           </h1> */}
         </Link>
         <div className="flex items-center gap-6">
@@ -47,7 +47,7 @@ export const Header = () => {
             <SheetContent className="w-80">
               <SheetTitle className="mt-2">
                 <h1 className="text-xl font-bold tracking-tighter">
-                  Work for Immigration
+                  Right Target
                 </h1>
               </SheetTitle>
               <nav className="flex h-full flex-col gap-4 px-2 py-8 text-end ">

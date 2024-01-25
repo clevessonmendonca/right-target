@@ -7,8 +7,10 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
+import axios from 'axios'
 
 import { z } from 'zod'
+import { toast } from 'sonner'
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -19,7 +21,7 @@ const formSchema = z.object({
   comments: z.string().optional(),
 })
 
-type FormSchema = z.infer<typeof formSchema>
+export type FormSchema = z.infer<typeof formSchema>
 
 export const CleaningForm = () => {
   const {
@@ -30,8 +32,24 @@ export const CleaningForm = () => {
     resolver: zodResolver(formSchema),
   })
 
-  const handleCleaningForm = async (data: FormSchema) => {
-    console.log(data)
+  async function handleCleaningForm(data: FormSchema) {
+    try {
+      const response = await axios.post('api/send', data)
+
+      if (!response.data.error)
+        return toast.success('Email send secess!', {
+          description:
+            'your email is send, check your email in breve entraremos in contact',
+        })
+
+      toast.error('Error sending email', {
+        description: 'Please try again later',
+      })
+    } catch (error) {
+      toast.error('Error sending email', {
+        description: 'Please try again later',
+      })
+    }
   }
 
   return (
@@ -42,7 +60,7 @@ export const CleaningForm = () => {
       >
         <div>
           <h2 className="text-3xl font-bold tracking-tight">
-            Get Your Home Cleaned!
+            Elevate Your Living Space with Sparkling Cleanliness!
           </h2>
           <p className="mt-2 text-sm text-foreground">
             Experience the joy of a spotless home. Fill out the form below, and
@@ -145,7 +163,9 @@ export const CleaningForm = () => {
           <Textarea {...register('comments')} />
         </div>
 
-        <Button type="submit">Submit</Button>
+        <Button type="submit" className="font-bold" size="xl">
+          REQUEST A QUOTE NOW
+        </Button>
       </form>
     </Card>
   )

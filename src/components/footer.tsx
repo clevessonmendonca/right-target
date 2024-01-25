@@ -88,7 +88,7 @@ export const Footer = () => {
           <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
             {Date.now().toString()}
             <a href="/" className="hover:underline">
-              Work for Immigrants
+              Right Target
             </a>
             . All Rights Reserved.
           </span>

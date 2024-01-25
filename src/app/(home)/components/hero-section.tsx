@@ -1,6 +1,11 @@
 import { Button } from '@/components/ui/button'
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
+import { PhoneIcon } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
+import { CleaningForm } from './cleaning-form'
+import { ScrollArea } from '@/components/ui/scroll-area'
 
 export const HeroSection = () => {
   return (
@@ -10,15 +15,32 @@ export const HeroSection = () => {
           Impeccable Cleaning Services Tailored for You.
         </h1>
         <p className="text-xs text-muted-foreground">
-          Work for Immigrants offers top-notch cleaning services performed by
-          dedicated professionals. Let us take care of your home while you focus
+          Right Target offers top-notch cleaning services performed by
+          professionals. Let us take care of your home while you focus on what
           on what matters most to you
         </p>
         <div>
-          <Button size="lg" className="text-xl">
-            Book now
-          </Button>
-          {/* <span className="font-medium text-lg flex gap-4 mt-4"><PhoneIcon /> 772-521-3374</span> */}
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button size="xl" className="text-xl font-bold">
+                Book now
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="p-0">
+              <ScrollArea className="max-h-screen md:max-h-[80vh]">
+                <CleaningForm />
+              </ScrollArea>
+            </DialogContent>
+          </Dialog>
+          <Link
+            href="tel:+19735830823"
+            className="mt-4 flex gap-4 text-xl font-medium"
+          >
+            <PhoneIcon /> (973) 583-0823
+          </Link>
+          <span className="text-xs text-muted-foreground">
+            Request a quote? Call us now.
+          </span>
         </div>
       </div>
       <div>

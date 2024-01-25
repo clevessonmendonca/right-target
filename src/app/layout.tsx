@@ -5,13 +5,14 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Script from 'next/script'
+import { Toaster } from '@/components/ui/sonner'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Work for Immigration',
+  title: 'Right Target',
   description:
-    'Professional and reliable residential cleaning service. Transform your home with Work for Immigration.',
+    'Professional and reliable residential cleaning service. Transform your home with Right Target.',
 }
 
 export default function RootLayout({
@@ -41,6 +42,7 @@ export default function RootLayout({
           <div className="flex-1">{children}</div>
           <Footer />
           <SpeedInsights />
+          <Toaster richColors />
         </div>
       </body>
     </html>

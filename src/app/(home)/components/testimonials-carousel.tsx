@@ -14,7 +14,7 @@ const testimonials = [
   {
     name: 'Sarah Taylor',
     comment:
-      'The Deep Clean transformed my living space. Work for Immigrants brought order to my home, and I appreciate their dedication to perfection.',
+      'The Deep Clean transformed my living space. Right Target brought order to my home, and I appreciate their dedication to perfection.',
     imageSrc: '/sara.jpg',
   },
   {
