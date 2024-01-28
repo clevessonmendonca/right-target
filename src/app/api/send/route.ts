@@ -1,28 +1,19 @@
-import 'dotenv/config'
-import { EmailTemplate } from '@/components/email-templete'
-import { Resend } from 'resend'
-import { NextApiRequest, NextApiResponse } from 'next'
+import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
+export async function POST() {
   try {
-    console.log(req.body)
-    const { data, error } = await resend.emails.send({
-      from: 'Right Target <righttarget.contact@gmail.com>',
-      to: ['wanderbloks311@gmail.com'],
-      subject: 'Right Target',
-      text: 'teste',
-      // react: EmailTemplate() as React.ReactElement,
-    })
+    const data = await resend.emails.send({
+      from: 'Acme <onboarding@resend.dev>',
+      to: ['delivered@resend.dev'],
+      subject: 'Hello world',
+      text: 'Hello world',
+      // react: EmailTemplate({ firstName: 'John' }),
+    });
 
-    if (error) {
-      return res.status(500).json({ message: error })
-    }
-
-    return res.status(200).json({ data })
+    return Response.json(data);
   } catch (error) {
-    console.error('Error:', error)
-    return res.status(500).json({ error: 'Internal Server Error' })
+    return Response.json({ error });
   }
 }

@@ -34,20 +34,17 @@ export const CleaningForm = () => {
 
   async function handleCleaningForm(data: FormSchema) {
     try {
-      const response = await axios.post('/api/send', data)
+      const response = await axios.post('api/send', data)
 
-      if (response.data.error) {
-        console.error('Error sending email:', response.data.error)
-        toast.error('Error sending email', {
-          description: 'Please try again later',
+      if (!response.data.error)
+        return toast.success('Email send secess!', {
+          description: 'Your email is sent successfully.',
         })
-      } else {
-        toast.success('Email sent successfully!', {
-          description: 'We will contact you shortly.',
-        })
-      }
+
+      toast.error('Error sending email', {
+        description: 'Please try again later',
+      })
     } catch (error) {
-      console.error('Error sending email:', error)
       toast.error('Error sending email', {
         description: 'Please try again later',
       })
