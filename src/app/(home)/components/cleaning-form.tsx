@@ -34,7 +34,9 @@ export const CleaningForm = () => {
 
   async function handleCleaningForm(data: FormSchema) {
     try {
-      const response = await axios.post('api/send', data)
+      console.log(data)
+      const parsed = formSchema.parse(data)
+      const response = await axios.post('api/send', parsed)
 
       if (!response.data.error)
         return toast.success('Email send secess!', {
