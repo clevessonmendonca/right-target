@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: 'Right Target',
   description:
     'Professional and reliable residential cleaning service. Transform your home with Right Target.',
+  icons: {
+    icon: '/logotipo.png',
+  },
 }
 
 export default function RootLayout({
