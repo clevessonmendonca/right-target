@@ -2,6 +2,7 @@ import 'dotenv/config'
 import { EmailTemplate } from '@/components/email-templete'
 import { Resend } from 'resend'
 import { FormSchema } from '@/app/(home)/components/cleaning-form'
+import { NextResponse } from 'next/server'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -15,11 +16,11 @@ export async function POST(form: FormSchema) {
     })
 
     if (error) {
-      return Response.json({ error })
+      return NextResponse.json({ message: error })
     }
 
-    return Response.json({ data })
+    return NextResponse.json({ data })
   } catch (error) {
-    return Response.json({ error })
+    return NextResponse.json({ error })
   }
 }
