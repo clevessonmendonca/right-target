@@ -1,5 +1,8 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { Button } from './ui/button'
+import { InstagramIcon } from 'lucide-react'
 
 export const Footer = () => {
   return (
@@ -7,16 +10,16 @@ export const Footer = () => {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <a href="/" className="flex items-center">
-              {/* <img
-                src="/docs/images/logo.svg"
-                className="h-8 me-3"
-                alt="FlowBite Logo"
-              /> */}
-              <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
-                Work for Immigrants
-              </span>
-            </a>
+            <Link href="/" className="flex items-center">
+              <Image
+                sizes="100vw"
+                width={0}
+                className="h-auto w-full  max-w-52 px-5 md:max-w-60"
+                height={0}
+                src="/logo.png"
+                alt="Right Target Logo"
+              />
+            </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
             <div>
@@ -25,17 +28,17 @@ export const Footer = () => {
               </h2>
               <ul className="font-medium text-gray-500 dark:text-gray-400">
                 <li className="mb-4">
-                  <Link href="/" className="hover:underline">
+                  <Link href="/services" className="hover:underline">
                     Services
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="/" className="hover:underline">
+                  <Link href="/about" className="hover:underline">
                     About
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="/" className="hover:underline">
+                  <Link href="/testimonials" className="hover:underline">
                     Testimonials
                   </Link>
                 </li>
@@ -47,20 +50,25 @@ export const Footer = () => {
               </h2>
               <ul className="font-medium text-gray-500 dark:text-gray-400">
                 <li className="mb-4">
-                  <a
-                    href="https://github.com/themesberg/flowbite"
+                  <Link
+                    href="https://www.instagram.com/right_.target/"
                     className="hover:underline "
                   >
                     Instagram
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
+                    href="https://www.facebook.com/profile.php?id=61555770274333"
                     className="hover:underline"
                   >
                     Facebook
                   </a>
+                </li>
+                <li className="mb-4 mt-4">
+                  <Link href="/contact">
+                    <Button>Contact us</Button>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -70,12 +78,12 @@ export const Footer = () => {
               </h2>
               <ul className="font-medium text-gray-500 dark:text-gray-400">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="/privacy" className="hover:underline">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/terms-conditions" className="hover:underline">
                     Terms &amp; Conditions
                   </a>
                 </li>
@@ -86,16 +94,23 @@ export const Footer = () => {
         <hr className="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
-            {Date.now().toString()}
-            <a href="/" className="hover:underline">
+            2024{' '}
+            <Link href="/" className="hover:underline">
               Right Target
-            </a>
+            </Link>
             . All Rights Reserved.
           </span>
-          <div className="mt-4 flex sm:mt-0 sm:justify-center">
+          <div className="mt-4 flex items-center gap-2 sm:mt-0 sm:justify-center">
             <Link
-              href="#"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              href="https://www.instagram.com/right_.target/"
+              className="text-gray-500 hover:text-primary "
+            >
+              <InstagramIcon className="hover:text-primary" />
+              <span className="sr-only">Instagram page</span>
+            </Link>
+            <Link
+              href="https://www.facebook.com/profile.php?id=61555770274333"
+              className="text-gray-500 hover:text-primary"
             >
               <svg
                 className="h-4 w-4"

@@ -7,14 +7,14 @@ import Image from 'next/image'
 export const Header = () => {
   return (
     <header className="mx-auto w-full max-w-screen-2xl">
-      <Card className="flex items-center justify-between border-none px-[1.875rem] py-[1.25rem]">
+      <Card className="flex items-center justify-between border-none px-[1.875rem] py-[1rem]">
         <Link href="/">
           <Image
             sizes="100vw"
             width={0}
-            className="h-auto w-full  max-w-60 px-5 md:max-w-64"
+            className="h-auto w-full  max-w-48 px-5 md:max-w-60"
             height={0}
-            src="/logo.jpeg"
+            src="/logo.png"
             alt="Right Target Logo"
           />
           {/* <h1 className="text-xl font-bold tracking-tighter">
@@ -45,12 +45,26 @@ export const Header = () => {
               </svg>
             </SheetTrigger>
             <SheetContent className="w-80">
-              <SheetTitle className="mt-2">
+              <SheetTitle className="mt-2 flex items-center gap-2">
+                <Image
+                  sizes="100vw"
+                  width={0}
+                  className="h-auto w-full max-w-10"
+                  height={0}
+                  src="/logotipo.png"
+                  alt="Right Target Logotipo"
+                />
                 <h1 className="text-xl font-bold tracking-tighter">
                   Right Target
                 </h1>
               </SheetTitle>
               <nav className="flex h-full flex-col gap-4 px-2 py-8 text-end ">
+                <Link
+                  href="/"
+                  className="py-2 text-gray-500 hover:text-gray-900"
+                >
+                  Home
+                </Link>
                 <Link
                   href="/about"
                   className="py-2 text-gray-500 hover:text-gray-900"
@@ -70,13 +84,16 @@ export const Header = () => {
                   Services
                 </Link>
                 <Link href="/contact">
-                  <Button>Contact us</Button>
+                  <Button size="xl">Contact us</Button>
                 </Link>
               </nav>
             </SheetContent>
           </Sheet>
 
           <nav className="hidden items-center gap-6 md:flex">
+            <Link href="/" className="text-gray-500 hover:text-gray-900">
+              Home
+            </Link>
             <Link href="/about" className="text-gray-500 hover:text-gray-900">
               About
             </Link>
@@ -93,7 +110,7 @@ export const Header = () => {
               Services
             </Link>
             <Link href="/contact">
-              <Button>Contact us</Button>
+              <Button size="lg">Contact us</Button>
             </Link>
           </nav>
         </div>

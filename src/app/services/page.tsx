@@ -1,35 +1,22 @@
+import React from 'react'
 import {
-  Building,
   CalendarDaysIcon,
-  CombineIcon,
-  FastForward,
-  PartyPopperIcon,
   SparklesIcon,
-  UserCheck,
+  PartyPopperIcon,
+  Building,
+  CombineIcon,
 } from 'lucide-react'
-import { HeroSection } from './components/hero-section'
 import { Card } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { CleaningForm } from './components/cleaning-form'
-import { TestimonialsCarousel } from '../../components/testimonials-carousel'
+import { CleaningForm } from '../(home)/components/cleaning-form'
 
-export default function Home() {
+export default function ServicesPage() {
   return (
     <div className="flex flex-col">
-      <HeroSection />
-
-      <div className="mx-auto w-full max-w-screen-md px-4">
-        <Card className="flex flex-wrap items-center justify-around gap-8 px-4 py-6 text-sm">
-          <span className="flex items-center gap-2">
-            <FastForward className="text-primary" /> Quick Services
-          </span>
-          <span className="flex items-center gap-2">
-            <SparklesIcon className="text-primary" /> Deep Clean Solutions
-          </span>
-          <span className="flex items-center gap-2">
-            <UserCheck className="text-primary" /> Personalized Care
-          </span>
-        </Card>
+      <div className="bg-primary py-4 text-center text-white">
+        <p className="text-lg">
+          Explore the variety of top-notch cleaning services offered by Right
+          Target. Choose the one that suits your needs.
+        </p>
       </div>
 
       <div className="mx-auto mt-28 flex flex-col items-center">
@@ -87,19 +74,7 @@ export default function Home() {
           </Card>
         </div>
       </div>
-
-      <div className="bg-primary">
-        <div className="mx-auto w-full max-w-screen-xl px-4 py-12">
-          <Badge className="text-white">Testimonials</Badge>
-          <h2 className="text-3xl font-bold tracking-tight ">
-            Our Clients <span className="text-white">Reviews</span>
-          </h2>
-
-          <TestimonialsCarousel />
-        </div>
-      </div>
-
-      <div className="my-16 px-4">
+      <div className="my-16 w-full bg-primary px-4 py-12">
         <CleaningForm />
       </div>
     </div>
