@@ -12,6 +12,7 @@ import { HomeDetailsForm } from '@/components/form/home-details-form'
 import { toast } from 'sonner'
 import axios from 'axios'
 import { useEffect } from 'react'
+import { Button } from '../ui/button'
 
 function ActiveStepFormComponent() {
   const { step, formData } = useFormState()
@@ -57,6 +58,7 @@ function ActiveStepFormComponent() {
       return (
         <>
           <p>Sending your book now.</p>
+          <Button onClick={() => handleCleaningForm(formData)}>Resend</Button>
         </>
       )
     default:

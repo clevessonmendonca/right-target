@@ -12,14 +12,11 @@ import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { CleaningForm } from '../../components/form/cleaning-form'
 import { TestimonialsCarousel } from '../../components/testimonials-carousel'
-import ReceivedEmailTemplate from '@/components/email-templete'
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       <HeroSection />
-
-    <ReceivedEmailTemplate />
 
       <div className="mx-auto w-full max-w-screen-md px-4">
         <Card className="flex flex-wrap items-center justify-around gap-8 px-4 py-6 text-sm">

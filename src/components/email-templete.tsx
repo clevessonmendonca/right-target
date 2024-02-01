@@ -1,7 +1,5 @@
 import * as React from 'react'
-import Link from 'next/link'
 import { MergedFormData } from './form/FormContext'
-import { Button } from './ui/button'
 
 const ReceivedEmailTemplate: React.FC<MergedFormData> = ({
   email,
@@ -137,11 +135,11 @@ const ReceivedEmailTemplate: React.FC<MergedFormData> = ({
       </p>
       <p>Thank you for your attention to this request.</p>
       <div>
-        <Button className="w-full text-center">
-          <Link href={`mailto:${email}`} className="text-lg font-semibold">
+        <button className="inline-flex w-full items-center justify-center whitespace-nowrap rounded-md bg-primary text-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+          <a href={`mailto:${email}`} className="text-lg font-semibold">
             Send Budget to Customer
-          </Link>
-        </Button>
+          </a>
+        </button>
       </div>
     </div>
   )
