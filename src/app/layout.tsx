@@ -13,9 +13,6 @@ export const metadata: Metadata = {
   title: 'Right Target',
   description:
     'Professional and reliable residential cleaning service. Transform your home with Right Target.',
-  icons: {
-    icon: '/logotipo.png',
-  },
 }
 
 export default function RootLayout({
@@ -25,6 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.png" sizes="any" />
+      </head>
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=AW-11139734703"
@@ -45,7 +45,7 @@ export default function RootLayout({
           <div className="flex-1">{children}</div>
           <Footer />
           <SpeedInsights />
-          <Toaster richColors />
+          <Toaster richColors theme="light" />
         </div>
       </body>
     </html>

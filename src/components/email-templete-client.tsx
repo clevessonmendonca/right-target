@@ -1,9 +1,8 @@
 import * as React from 'react'
-import Link from 'next/link'
 import { MergedFormData } from './form/FormContext'
-import { Button } from './ui/button'
+import Link from 'next/link'
 
-const ReceivedEmailTemplate: React.FC<MergedFormData> = ({
+const EmailTemplateClient: React.FC<Readonly<MergedFormData>> = ({
   email,
   phone,
   addressLine1,
@@ -55,12 +54,12 @@ const ReceivedEmailTemplate: React.FC<MergedFormData> = ({
   )
 
   return (
-    <div className="mx-auto my-12 flex max-w-screen-md flex-col gap-4 p-2">
+    <div className="mx-auto flex max-w-screen-md flex-col gap-4 p-2">
       <div>
-        <p className="text-xl font-semibold">Dear Team,</p>
+        <p className="text-xl font-semibold">Dear {fullName},</p>
         <p className="text-sm">
-          You have received a new cleaning services request. Here are the
-          details:
+          Thank you for choosing our cleaning services. We have received your
+          request for a cleaning house budget, and here are the details:
         </p>
       </div>
       <div className="flex flex-col gap-2 rounded-lg border bg-card px-6 py-6 text-card-foreground shadow-sm">
@@ -68,9 +67,6 @@ const ReceivedEmailTemplate: React.FC<MergedFormData> = ({
           <strong>Contact Information:</strong>
         </p>
         <ul className="mb-4">
-          <li>
-            <strong>Full Name:</strong> {fullName}
-          </li>
           <li>
             <strong>Email:</strong> {email}
           </li>
@@ -132,19 +128,25 @@ const ReceivedEmailTemplate: React.FC<MergedFormData> = ({
       </div>
 
       <p>
-        Review the details and provide a detailed budget. If you have any
-        additional questions or specific requirements, feel free to reach out.
+        We will review your request and provide you with a detailed budget
+        shortly. If you have any additional questions or specific requirements,
+        feel free to reach out to us.
       </p>
-      <p>Thank you for your attention to this request.</p>
+      <p>
+        Thank you again for choosing our services. We look forward to assisting
+        you with your cleaning needs!
+      </p>
       <div>
-        <Button className="w-full text-center">
-          <Link href={`mailto:${email}`} className="text-lg font-semibold">
-            Send Budget to Customer
-          </Link>
-        </Button>
+        <p>Best regards,</p>
+        <Link
+          href="https://righttargetservice.com"
+          className="text-lg font-semibold"
+        >
+          Right Target
+        </Link>
       </div>
     </div>
   )
 }
 
-export default ReceivedEmailTemplate
+export default EmailTemplateClient

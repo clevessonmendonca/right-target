@@ -1,11 +1,11 @@
-import { Button } from '@/components/ui/button'
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
-import { PhoneIcon } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import { CleaningForm } from './cleaning-form'
-import { ScrollArea } from '@/components/ui/scroll-area'
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { PhoneIcon } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { CleaningForm } from "../../../components/form/cleaning-form";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export const HeroSection = () => {
   return (
@@ -54,5 +54,5 @@ export const HeroSection = () => {
         />
       </div>
     </div>
-  )
-}
+  );
+};

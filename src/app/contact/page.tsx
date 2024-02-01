@@ -1,11 +1,11 @@
-import React from 'react'
-import { PhoneIcon, MailIcon, MapPinIcon, InstagramIcon } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import { CleaningForm } from '../(home)/components/cleaning-form'
-import { Card } from '@/components/ui/card'
-import Link from 'next/link'
+import React from "react";
+import { PhoneIcon, MailIcon, MapPinIcon, InstagramIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { CleaningForm } from "../../components/form/cleaning-form";
+import { Card } from "@/components/ui/card";
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -97,5 +97,5 @@ export default function Contact() {
         </div>
       </div>
     </div>
-  )
+  );
 }

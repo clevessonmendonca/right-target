@@ -1,14 +1,14 @@
-import React from 'react'
-import { FastForward, SparklesIcon, UserCheck } from 'lucide-react'
-import { Card } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { TestimonialsCarousel } from '../../components/testimonials-carousel'
-import { CleaningForm } from '../(home)/components/cleaning-form'
+import React from "react";
+import { FastForward, SparklesIcon, UserCheck } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { TestimonialsCarousel } from "../../components/testimonials-carousel";
+import { CleaningForm } from "../../components/form/cleaning-form";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from '@/components/ui/collapsible'
+} from "@/components/ui/collapsible";
 
 export default function About() {
   return (
@@ -18,7 +18,7 @@ export default function About() {
           <div className="cursor-pointer bg-primary py-4 text-center text-white">
             <p className="text-lg">
               Transform your living space with Right Target&apos;s top-notch
-              cleaning services.{' '}
+              cleaning services.{" "}
               <span className="text-black underline">
                 Schedule a cleaning now!
               </span>
@@ -85,5 +85,5 @@ export default function About() {
         </div>
       </div>
     </div>
-  )
+  );
 }

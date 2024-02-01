@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 import {
   CalendarDaysIcon,
   SparklesIcon,
   PartyPopperIcon,
   Building,
   CombineIcon,
-} from 'lucide-react'
-import { Card } from '@/components/ui/card'
-import { CleaningForm } from '../(home)/components/cleaning-form'
+} from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { CleaningForm } from "../../components/form/cleaning-form";
 
 export default function ServicesPage() {
   return (
@@ -78,5 +78,5 @@ export default function ServicesPage() {
         <CleaningForm />
       </div>
     </div>
-  )
+  );
 }
