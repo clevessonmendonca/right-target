@@ -34,12 +34,17 @@ export const Footer = () => {
                 </li>
                 <li className="mb-4">
                   <Link href="/about" className="hover:underline">
+                    Get a Quote
+                  </Link>
+                </li>
+                <li className="mb-4">
+                  <Link href="/testimonials" className="hover:underline">
                     About
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link href="/testimonials" className="hover:underline">
-                    Testimonials
+                    Comments
                   </Link>
                 </li>
               </ul>
