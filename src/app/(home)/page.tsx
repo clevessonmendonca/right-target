@@ -14,7 +14,7 @@ export default function Home() {
     <div className="flex flex-col">
       <HeroSection />
 
-      <div className="z-10 mx-auto -mt-9 w-full max-w-screen-md px-4">
+      <div className="z-10 mx-auto -mt-6 w-full max-w-screen-md px-4 md:-mt-9">
         <Card className="flex flex-wrap items-center justify-around gap-8 px-4 py-6 text-sm">
           <span className="flex items-center gap-2">
             <FastForward className="text-primary" /> Quick Services

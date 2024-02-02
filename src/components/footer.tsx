@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Button } from './ui/button'
-import { InstagramIcon } from 'lucide-react'
 
 export const Footer = () => {
   return (
@@ -33,12 +32,12 @@ export const Footer = () => {
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="/about" className="hover:underline">
+                  <Link href="/get-a-quote" className="hover:underline">
                     Get a Quote
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link href="/testimonials" className="hover:underline">
+                  <Link href="/about" className="hover:underline">
                     About
                   </Link>
                 </li>
@@ -110,26 +109,28 @@ export const Footer = () => {
               href="https://www.instagram.com/right_.target/"
               className="text-gray-500 hover:text-primary "
             >
-              <InstagramIcon className="hover:text-primary" />
+              <Image
+                sizes="100vw"
+                width={0}
+                className="h-auto w-full  max-w-14 rounded-full"
+                height={0}
+                src="/instagram-icon.png"
+                alt="Instagram Right Target"
+              />
               <span className="sr-only">Instagram page</span>
             </Link>
             <Link
               href="https://www.facebook.com/profile.php?id=61555770274333"
               className="text-gray-500 hover:text-primary"
             >
-              <svg
-                className="h-4 w-4"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 8 19"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              <Image
+                sizes="100vw"
+                width={0}
+                className="h-auto w-full  max-w-9"
+                height={0}
+                src="/facebook-icon.png"
+                alt="Facebook Right Target"
+              />
               <span className="sr-only">Facebook page</span>
             </Link>
           </div>

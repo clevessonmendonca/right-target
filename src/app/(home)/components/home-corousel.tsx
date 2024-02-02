@@ -1,7 +1,5 @@
 'use client'
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Card } from '@/components/ui/card'
 import {
   Carousel,
   CarouselContent,
@@ -28,7 +26,7 @@ const images = [
 ]
 
 export const HomeCarousel = () => {
-  const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: true }))
+  const plugin = useRef(Autoplay({ delay: 4000 }))
 
   return (
     <Carousel plugins={[plugin.current]} className="max-w-screen-md">

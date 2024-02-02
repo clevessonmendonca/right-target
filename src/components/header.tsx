@@ -72,10 +72,10 @@ export const Header = () => {
                   About
                 </Link>
                 <Link
-                  href="/testimonials"
+                  href="/get-a-quote"
                   className="py-2 text-gray-500 hover:text-gray-900"
                 >
-                  Testimonials
+                  Get A Quote
                 </Link>
                 <Link
                   href="/services"
@@ -86,6 +86,38 @@ export const Header = () => {
                 <Link href="/contact">
                   <Button size="xl">Contact us</Button>
                 </Link>
+
+                <div className="mt-4 flex justify-end gap-4">
+                  <Link
+                    href="https://www.instagram.com/right_.target/"
+                    className="flex items-center gap-1 font-semibold"
+                  >
+                    <Image
+                      sizes="100vw"
+                      width={0}
+                      className="h-auto w-full  max-w-14 rounded-full"
+                      height={0}
+                      src="/instagram-icon.png"
+                      alt="Instagram Right Target"
+                    />
+                    <span className="sr-only">Instagram page</span>
+                  </Link>
+                  <Link
+                    href="https://www.facebook.com/profile.php?id=61555770274333"
+                    className="flex items-center gap-2 font-semibold"
+                  >
+                    <Image
+                      sizes="100vw"
+                      width={0}
+                      className="h-auto w-full  max-w-9"
+                      height={0}
+                      src="/facebook-icon.png"
+                      alt="Facebook Right Target"
+                    />
+
+                    <span className="sr-only">Facebook page</span>
+                  </Link>
+                </div>
               </nav>
             </SheetContent>
           </Sheet>

@@ -15,24 +15,24 @@ const testimonials = [
     name: 'Sarah Taylor',
     comment:
       'The Deep Clean transformed my living space. Right Target brought order to my home, and I appreciate their dedication to perfection.',
-    imageSrc: '/sara.jpg',
+    imageSrc: '/avatar.webp',
   },
   {
     name: 'Alex Miller',
     comment:
       'Amazing service! The team did a fantastic job cleaning our house. Highly recommended!',
-    imageSrc: '/man-cleaning.jpg',
+    imageSrc: '/avatar.webp',
   },
   {
     name: 'Emily Davis',
     comment:
       "I'm impressed with the attention to detail. They truly care about customer satisfaction.",
-    imageSrc: '/woman-cleaning.jpg',
+    imageSrc: '/avatar.webp',
   },
 ]
 
 export const TestimonialsCarousel = () => {
-  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }))
+  const plugin = useRef(Autoplay({ delay: 2000 }))
 
   return (
     <Carousel

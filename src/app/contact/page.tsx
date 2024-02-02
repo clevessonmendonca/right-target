@@ -1,11 +1,12 @@
 import React from 'react'
-import { PhoneIcon, MailIcon, MapPinIcon, InstagramIcon } from 'lucide-react'
+import { PhoneIcon, MailIcon, MapPinIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { CleaningForm } from '../../components/form/cleaning-form'
 import { Card } from '@/components/ui/card'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Contact() {
   return (
@@ -66,30 +67,32 @@ export default function Contact() {
           <Card className="mb-20 flex w-full items-center justify-around gap-4 px-6 py-4">
             <Link
               href="https://www.instagram.com/right_.target/"
-              className="flex gap-2"
+              className="flex items-center gap-1 font-semibold"
             >
-              <InstagramIcon className="text-primary" />
+              <Image
+                sizes="100vw"
+                width={0}
+                className="h-auto w-full  max-w-14 rounded-full"
+                height={0}
+                src="/instagram-icon.png"
+                alt="Instagram Right Target"
+              />{' '}
               <span>@right_.target</span>
               <span className="sr-only">Instagram page</span>
             </Link>
             <Link
               href="https://www.facebook.com/profile.php?id=61555770274333"
-              className="flex gap-2"
+              className="flex items-center gap-2 font-semibold"
             >
-              <svg
-                className="h-4 w-4 text-primary"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 8 19"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span>@righttarget</span>
+              <Image
+                sizes="100vw"
+                width={0}
+                className="h-auto w-full  max-w-9"
+                height={0}
+                src="/facebook-icon.png"
+                alt="Facebook Right Target"
+              />
+              <span>Right Target</span>
 
               <span className="sr-only">Facebook page</span>
             </Link>
