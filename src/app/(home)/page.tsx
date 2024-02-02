@@ -1,6 +1,4 @@
-import { FastForward, SparklesIcon, UserCheck } from 'lucide-react'
 import { HeroSection } from './components/hero-section'
-import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { CleaningForm } from '../../components/form/cleaning-form'
 import { TestimonialsCarousel } from '../../components/testimonials-carousel'
@@ -8,25 +6,14 @@ import { AboutText } from '../about/components/about-text'
 import { Button } from '@/components/ui/button'
 import { ServicesCard } from '../services/components/services-card'
 import Link from 'next/link'
+import { ServicesSection } from './components/service-section'
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       <HeroSection />
 
-      <div className="z-10 mx-auto -mt-6 w-full max-w-screen-md px-4 md:-mt-9">
-        <Card className="flex flex-wrap items-center justify-around gap-8 px-4 py-6 text-sm">
-          <span className="flex items-center gap-2">
-            <FastForward className="text-primary" /> Quick Services
-          </span>
-          <span className="flex items-center gap-2">
-            <SparklesIcon className="text-primary" /> Deep Clean Solutions
-          </span>
-          <span className="flex items-center gap-2">
-            <UserCheck className="text-primary" /> Personalized Care
-          </span>
-        </Card>
-      </div>
+      <ServicesSection />
 
       <div className="mx-auto mt-16 flex w-full flex-col items-center bg-[#F97316] py-8">
         <h2 className="text-3xl font-bold tracking-tight text-white">
