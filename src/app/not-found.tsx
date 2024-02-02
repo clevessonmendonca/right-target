@@ -1,9 +1,9 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+'use client'
+import React from 'react'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 export default function NotFound() {
   return (
@@ -31,5 +31,5 @@ export default function NotFound() {
         </Link>
       </motion.div>
     </div>
-  );
+  )
 }
