@@ -9,7 +9,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/components/ui/collapsible'
-import { AboutText } from './componts/about-text'
+import { AboutText } from './components/about-text'
 
 export default function About() {
   return (

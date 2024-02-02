@@ -42,7 +42,7 @@ export const AboutText = () => {
         className="h-auto w-full max-w-lg px-5"
         height={0}
         src="/women-cleaning.jpg"
-        alt=""
+        alt="Women cleaning Right Target"
       />
     </div>
   )

@@ -1,11 +1,8 @@
-import React from "react";
-import { PhoneIcon, MailIcon, MapPinIcon, InstagramIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { CleaningForm } from "../../components/form/cleaning-form";
-import { Card } from "@/components/ui/card";
-import Link from "next/link";
+import React from 'react'
+import { PhoneIcon, MailIcon, MapPinIcon, InstagramIcon } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
+import Link from 'next/link'
 
 export default function Contact() {
   return (
@@ -27,18 +24,11 @@ export default function Contact() {
             us through the options below.
           </p>
           <div>
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button size="xl" className="text-xl font-bold">
-                  Schedule a Cleaning
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="p-0">
-                <ScrollArea className="max-h-screen md:max-h-[80vh]">
-                  <CleaningForm />
-                </ScrollArea>
-              </DialogContent>
-            </Dialog>
+            <Link href="/get-a-quote">
+              <Button size="xl" className="text-xl font-bold">
+                Schedule a Cleaning
+              </Button>
+            </Link>
           </div>
 
           <Card className="mt-4 flex w-full flex-col gap-4 px-6 py-12">
@@ -97,5 +87,5 @@ export default function Contact() {
         </div>
       </div>
     </div>
-  );
+  )
 }
