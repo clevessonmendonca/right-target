@@ -98,10 +98,10 @@ export const Header = () => {
               About
             </Link>
             <Link
-              href="/testimonials"
+              href="/get-a-quote"
               className="text-gray-500 hover:text-gray-900"
             >
-              Testimonials
+              Get a Quote
             </Link>
             <Link
               href="/services"

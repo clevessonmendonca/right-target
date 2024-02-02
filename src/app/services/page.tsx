@@ -1,13 +1,6 @@
-import React from "react";
-import {
-  CalendarDaysIcon,
-  SparklesIcon,
-  PartyPopperIcon,
-  Building,
-  CombineIcon,
-} from "lucide-react";
-import { Card } from "@/components/ui/card";
-import { CleaningForm } from "../../components/form/cleaning-form";
+import React from 'react'
+import { CleaningForm } from '../../components/form/cleaning-form'
+import { ServicesCard } from './components/services-card'
 
 export default function ServicesPage() {
   return (
@@ -22,61 +15,11 @@ export default function ServicesPage() {
       <div className="mx-auto mt-28 flex flex-col items-center">
         <h2 className="text-3xl font-bold tracking-tight ">Our Services</h2>
 
-        <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-center gap-4 px-4 py-12">
-          <Card className="flex h-72 max-w-sm flex-col items-center gap-2 px-8 py-6 text-center">
-            <CalendarDaysIcon />
-            <h3 className="mt-2 text-xl font-medium">
-              Regular and Recurring Cleaning
-            </h3>
-            <p className="mt-4 text-sm">
-              Enjoy the convenience of regular and recurring cleaning services.
-              We tailor our cleaning schedules to match your preferences and
-              keep your home consistently clean.
-            </p>
-          </Card>
-          <Card className="flex h-72 max-w-sm flex-col items-center gap-2 px-8 py-6 text-center">
-            <SparklesIcon />
-            <h3 className="mt-2 text-xl font-medium">Deep Clean</h3>
-            <p className="mt-4 text-sm">
-              Our deep residential cleaning service ensures a thorough and
-              comprehensive cleaning of your home, leaving every corner spotless
-              and refreshed.
-            </p>
-          </Card>
-          <Card className="flex h-72 max-w-sm flex-col items-center gap-2 px-8 py-6 text-center">
-            <PartyPopperIcon />
-            <h3 className="mt-2 text-xl font-medium">Post-Event Cleaning</h3>
-            <p className="mt-4 text-sm">
-              Hosting an event? Let us take care of the aftermath. Our
-              post-event cleaning service ensures your space is restored to its
-              pristine condition after the festivities.
-            </p>
-          </Card>
-          <Card className="flex h-72 max-w-sm flex-col items-center gap-2 px-8 py-6 text-center">
-            <Building />
-            <h3 className="mt-2 text-xl font-medium">
-              Organizational Services
-            </h3>
-            <p className="mt-4 text-sm">
-              Beyond cleaning, we offer organizational services to declutter and
-              enhance the overall orderliness of your living spaces.
-            </p>
-          </Card>
-          <Card className="flex h-72 max-w-sm flex-col items-center gap-2 px-8 py-6 text-center">
-            <CombineIcon />
-            <h3 className="mt-2 text-xl font-medium">
-              Customized Cleaning Solutions
-            </h3>
-            <p className="mt-4 text-sm">
-              Tailored to your unique needs, our customized cleaning solutions
-              offer flexibility and personalized care for your home.
-            </p>
-          </Card>
-        </div>
+        <ServicesCard />
       </div>
       <div className="my-16 w-full bg-primary px-4 py-12">
         <CleaningForm />
       </div>
     </div>
-  );
+  )
 }

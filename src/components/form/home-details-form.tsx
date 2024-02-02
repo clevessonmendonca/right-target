@@ -67,7 +67,7 @@ export const HomeDetailsForm = () => {
       onSubmit={handleSubmit(onHandleFormSubmit)}
       className="flex flex-col gap-4 space-y-4"
     >
-      <div className="flex gap-4">
+      <div className="flex flex-col gap-4 sm:flex-row">
         <div className="w-full">
           <label className="font-bold" htmlFor="sqft">
             SQ FT:
@@ -121,7 +121,7 @@ export const HomeDetailsForm = () => {
         </div>
       </div>
 
-      <div className="flex items-end gap-4">
+      <div className="flex flex-col items-end gap-4 sm:flex-row">
         <div className="w-full">
           <label className="font-bold" htmlFor="levels">
             Number of Levels:
@@ -171,7 +171,7 @@ export const HomeDetailsForm = () => {
         </div>
       </div>
 
-      <div className="flex items-end gap-4">
+      <div className="flex flex-col items-end gap-4 sm:flex-row">
         <div className="w-full">
           <label className="font-bold" htmlFor="numOfBeds">
             Number of Bedrooms:

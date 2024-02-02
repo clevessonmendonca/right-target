@@ -1,11 +1,11 @@
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { PhoneIcon } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { CleaningForm } from '../../../components/form/cleaning-form'
 import { ScrollArea } from '@/components/ui/scroll-area'
+import { HomeCarousel } from './home-corousel'
 
 export const HeroSection = () => {
   return (
@@ -14,7 +14,7 @@ export const HeroSection = () => {
         <h1 className="max-w-md text-4xl font-bold tracking-tight md:text-5xl">
           Impeccable Cleaning Services Tailored for You.
         </h1>
-        <p className="max-w-md text-xs text-muted-foreground md:max-w-full">
+        <p className="max-w-[32rem] text-xs text-muted-foreground">
           Right Target offers top-notch cleaning services performed by
           professionals. Let us take care of your home while you focus on what
           on what matters most to you
@@ -44,14 +44,7 @@ export const HeroSection = () => {
         </div>
       </div>
       <div>
-        <Image
-          sizes="100vw"
-          width={0}
-          className="h-auto w-full px-5"
-          height={0}
-          src="/women-cleaning.jpg"
-          alt=""
-        />
+        <HomeCarousel />
       </div>
     </div>
   )

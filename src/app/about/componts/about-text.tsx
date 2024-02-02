@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 export const AboutText = () => {
@@ -27,9 +28,11 @@ export const AboutText = () => {
         </p>
 
         <div className="w-full py-4 text-center md:text-start">
-          <Button className="border-2 border-primary bg-primary-foreground text-black hover:bg-primary/80">
-            GET A QUOTE NOW
-          </Button>
+          <Link href="/get-a-quote">
+            <Button className="border-2 border-primary bg-primary-foreground text-black hover:bg-primary/80">
+              GET A QUOTE NOW
+            </Button>
+          </Link>
         </div>
       </div>
 
