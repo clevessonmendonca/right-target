@@ -32,7 +32,9 @@ export default function Home() {
 
         <div className="mb-12 mt-6 font-bold">
           <Link href="/get-a-quote">
-            <Button size="xl">Explore Services</Button>
+            <Button size="xl" className="text-lg font-semibold">
+              Explore Services
+            </Button>
           </Link>
         </div>
       </div>
