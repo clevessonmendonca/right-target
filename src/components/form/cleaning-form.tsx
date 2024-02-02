@@ -12,9 +12,10 @@ import { HomeDetailsForm } from '@/components/form/home-details-form'
 import { toast } from 'sonner'
 import axios from 'axios'
 import { useEffect } from 'react'
-import { Button } from '../ui/button'
 import StepIndicator from './step-indicator'
-import { Separator } from '../ui/separator'
+import Image from 'next/image'
+import Link from 'next/link'
+import { CheckCircleIcon } from 'lucide-react'
 
 function ActiveStepFormComponent() {
   const { step, formData } = useFormState()
@@ -54,12 +55,47 @@ function ActiveStepFormComponent() {
     case 4:
       return (
         <div className="text-center">
-          <h2 className="mb-2 text-xl font-semibold">Thank you!</h2>
+          <h2 className="mb-4 flex items-center justify-center gap-3 text-2xl font-semibold">
+            <CheckCircleIcon className="h-8 w-8 text-emerald-500" /> Thank you!
+          </h2>
           <p>
             Thanks for requesting a quote with us! We appreciate your interest
             in our cleaning services. Our team will review your information, and
             we&aposll get back to you with a detailed budget shortly.
           </p>
+          <div className="mt-8">
+            <h3 className="text-lg font-semibold">Follow us on social media</h3>
+            <div className="mt-3 flex items-center justify-center gap-2">
+              <Link
+                href="https://www.instagram.com/right_.target/"
+                className="text-gray-500 hover:text-primary "
+              >
+                <Image
+                  sizes="100vw"
+                  width={0}
+                  className="h-auto w-full  max-w-14 rounded-full"
+                  height={0}
+                  src="/instagram-icon.png"
+                  alt="Instagram Right Target"
+                />
+                <span className="sr-only">Instagram page</span>
+              </Link>
+              <Link
+                href="https://www.facebook.com/profile.php?id=61555770274333"
+                className="text-gray-500 hover:text-primary"
+              >
+                <Image
+                  sizes="100vw"
+                  width={0}
+                  className="h-auto w-full  max-w-9"
+                  height={0}
+                  src="/facebook-icon.png"
+                  alt="Facebook Right Target"
+                />
+                <span className="sr-only">Facebook page</span>
+              </Link>
+            </div>
+          </div>
         </div>
       )
     default:

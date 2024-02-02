@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from '../ui/select'
 import { Input } from '../ui/input'
+import { Badge } from '../ui/badge'
 
 const homeDetailsFormSchema = z.object({
   sqft: z.string().refine((value) => !!value, {
@@ -252,7 +253,9 @@ export const HomeDetailsForm = () => {
       </div>
 
       <div className="w-full">
-        <label className="font-bold">Do you have any pets?</label>
+        <label className="font-bold">
+          Do you have any pets? <Badge variant="outline">Optional</Badge>
+        </label>
         <Input {...register('hasPets')} />
         {errors.hasPets && (
           <p className="text-sm text-destructive">{errors.hasPets.message}</p>
