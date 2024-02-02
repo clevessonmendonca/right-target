@@ -1,14 +1,15 @@
-import React from "react";
-import { FastForward, SparklesIcon, UserCheck } from "lucide-react";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { TestimonialsCarousel } from "../../components/testimonials-carousel";
-import { CleaningForm } from "../../components/form/cleaning-form";
+import React from 'react'
+import { FastForward, SparklesIcon, UserCheck } from 'lucide-react'
+import { Card } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { TestimonialsCarousel } from '../../components/testimonials-carousel'
+import { CleaningForm } from '../../components/form/cleaning-form'
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+} from '@/components/ui/collapsible'
+import { AboutText } from './componts/about-text'
 
 export default function About() {
   return (
@@ -18,7 +19,7 @@ export default function About() {
           <div className="cursor-pointer bg-primary py-4 text-center text-white">
             <p className="text-lg">
               Transform your living space with Right Target&apos;s top-notch
-              cleaning services.{" "}
+              cleaning services.{' '}
               <span className="text-black underline">
                 Schedule a cleaning now!
               </span>
@@ -30,16 +31,11 @@ export default function About() {
         </CollapsibleContent>
       </Collapsible>
 
-      <div className="mx-auto mt-16 flex flex-col items-center">
+      <div className="mx-auto mt-16 flex flex-col items-center px-4">
         <h2 className="text-3xl font-bold tracking-tight">About Us</h2>
-        <p className="mt-4 max-w-screen-md text-center text-lg">
-          At Right Target, we are not just a cleaning service; we are a
-          dedicated team on a mission to revolutionize the market. Our
-          commitment is to deliver impeccable cleaning services tailored to your
-          unique needs. With a competent team of professionals, we go beyond
-          cleaning — we provide an experience that transforms your living
-          spaces.
-        </p>
+        <div className="mt-12 text-black">
+          <AboutText />
+        </div>
       </div>
 
       <div className="mx-auto mt-12 flex flex-col items-center">
@@ -85,5 +81,5 @@ export default function About() {
         </div>
       </div>
     </div>
-  );
+  )
 }

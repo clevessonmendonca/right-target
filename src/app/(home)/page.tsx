@@ -12,13 +12,14 @@ import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { CleaningForm } from '../../components/form/cleaning-form'
 import { TestimonialsCarousel } from '../../components/testimonials-carousel'
+import { AboutText } from '../about/componts/about-text'
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       <HeroSection />
 
-      <div className="mx-auto w-full max-w-screen-md px-4">
+      <div className="mx-auto -mt-9 w-full max-w-screen-md px-4">
         <Card className="flex flex-wrap items-center justify-around gap-8 px-4 py-6 text-sm">
           <span className="flex items-center gap-2">
             <FastForward className="text-primary" /> Quick Services
@@ -30,6 +31,16 @@ export default function Home() {
             <UserCheck className="text-primary" /> Personalized Care
           </span>
         </Card>
+      </div>
+
+      <div className="mx-auto mt-16 flex w-full flex-col items-center bg-[#F97316] py-8">
+        <h2 className="text-3xl font-bold tracking-tight text-white">
+          About Us
+        </h2>
+
+        <div className="px-4 py-8 text-white">
+          <AboutText />
+        </div>
       </div>
 
       <div className="mx-auto mt-28 flex flex-col items-center">
