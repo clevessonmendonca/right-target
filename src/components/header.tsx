@@ -57,7 +57,7 @@ export const Header = () => {
                   width={0}
                   className="h-auto w-full max-w-10"
                   height={0}
-                  src="/logotipo.png"
+                  src="/right-logo.png"
                   alt="Right Target Logotipo"
                 />
                 <h1 className="text-xl font-bold tracking-tighter">

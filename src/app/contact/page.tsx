@@ -14,7 +14,7 @@ import { motion } from 'framer-motion'
 export default function Contact() {
   return (
     <div>
-      <div className="bg-primary py-4 text-center text-white">
+      <div className="bg-primary p-4 text-center text-white">
         <p className="text-lg">
           Explore the variety of top-notch cleaning services offered by Right
           Target. Choose the one that suits your needs.
@@ -22,7 +22,7 @@ export default function Contact() {
       </div>
 
       <div className="mx-auto mt-8 flex max-w-screen-xl flex-col items-center justify-center gap-8 p-4 text-center md:flex-row md:gap-4 md:text-left">
-        <div className="flex flex-col items-center gap-4 md:max-w-screen-lg">
+        <div className="flex flex-col items-center gap-4 px-4 md:max-w-screen-lg">
           <motion.h2
             className="max-w-md text-3xl font-bold tracking-tight md:text-4xl"
             initial={{ opacity: 0, x: -50 }}
@@ -31,7 +31,7 @@ export default function Contact() {
           >
             Get in Touch
           </motion.h2>
-          <p className="max-w-md text-center text-xs text-muted-foreground">
+          <p className="w-full max-w-md text-center text-xs text-muted-foreground">
             Have questions or want to schedule a cleaning service? Reach out to
             us through the options below.
           </p>
@@ -59,20 +59,20 @@ export default function Contact() {
             <Card className="mt-4 flex w-full flex-col gap-4 px-6 py-12">
               <Link
                 href="tel:+19735830823"
-                className="flex items-center gap-4 text-xl font-medium"
+                className="xs:justify-normal flex flex-wrap items-center justify-center gap-4 text-xl font-medium"
               >
                 <PhoneIcon className="text-primary" /> (973) 583-0823
               </Link>
               <Link
                 href="mailto:rightarget.contact@gmail.com"
-                className="flex items-center gap-4 text-xl font-medium"
+                className="xs:justify-normal flex flex-wrap items-center justify-center gap-4 text-xl font-medium"
               >
                 <MailIcon className="text-primary" />{' '}
                 rightarget.contact@gmail.com
               </Link>
               <Link
                 href="#"
-                className="flex items-center gap-4 text-xl font-medium"
+                className="xs:justify-normal flex flex-wrap items-center justify-center gap-4 text-xl font-medium"
               >
                 <MapPinIcon className="text-primary" /> 123 Cleaning Street,
                 Cityville, USA
@@ -85,10 +85,10 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.4 }}
           >
-            <Card className="mb-20 flex w-full items-center justify-around gap-4 px-6 py-4">
+            <Card className="mb-20 flex w-full flex-wrap items-center justify-around gap-4 px-6 py-4">
               <Link
                 href="https://www.instagram.com/right_.target/"
-                className="flex items-center gap-1 font-semibold"
+                className="flex flex-wrap items-center gap-1 font-semibold"
               >
                 <Image
                   sizes="100vw"
