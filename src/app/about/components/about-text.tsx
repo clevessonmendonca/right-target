@@ -6,7 +6,7 @@ import React from 'react'
 export const AboutText = () => {
   return (
     <div className="flex w-full flex-col justify-center gap-4 md:justify-between lg:flex-row">
-      <div className="w-full max-w-md tracking-tight">
+      <div className="mx-auto w-full max-w-md tracking-tight">
         <p className="mb-4 text-lg font-bold">
           Welcome to Right Target Cleaning Service!
         </p>

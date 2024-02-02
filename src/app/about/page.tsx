@@ -16,7 +16,7 @@ export default function About() {
     <div className="flex flex-col">
       <Collapsible>
         <CollapsibleTrigger asChild>
-          <div className="cursor-pointer bg-primary py-4 text-center text-white">
+          <div className="cursor-pointer bg-primary p-4 text-center text-white">
             <p className="text-lg">
               Transform your living space with Right Target&apos;s top-notch
               cleaning services.{' '}
@@ -26,7 +26,7 @@ export default function About() {
             </p>
           </div>
         </CollapsibleTrigger>
-        <CollapsibleContent className="mt-4">
+        <CollapsibleContent className="mt-4 px-4">
           <CleaningForm />
         </CollapsibleContent>
       </Collapsible>

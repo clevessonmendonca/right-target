@@ -1,7 +1,13 @@
 import Link from 'next/link'
 import { Card } from './ui/card'
 import { Button } from './ui/button'
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from './ui/sheet'
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from './ui/sheet'
 import Image from 'next/image'
 
 export const Header = () => {
@@ -59,64 +65,83 @@ export const Header = () => {
                 </h1>
               </SheetTitle>
               <nav className="flex h-full flex-col gap-4 px-2 py-8 text-end ">
-                <Link
-                  href="/"
-                  className="py-2 text-gray-500 hover:text-gray-900"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/about"
-                  className="py-2 text-gray-500 hover:text-gray-900"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/get-a-quote"
-                  className="py-2 text-gray-500 hover:text-gray-900"
-                >
-                  Get A Quote
-                </Link>
-                <Link
-                  href="/services"
-                  className="py-2 text-gray-500 hover:text-gray-900"
-                >
-                  Services
-                </Link>
-                <Link href="/contact">
-                  <Button size="xl">Contact us</Button>
-                </Link>
+                <SheetClose asChild>
+                  <Link
+                    href="/"
+                    className="py-2 text-gray-500 hover:text-gray-900"
+                  >
+                    Home
+                  </Link>
+                </SheetClose>
+
+                <SheetClose asChild>
+                  <Link
+                    href="/about"
+                    className="py-2 text-gray-500 hover:text-gray-900"
+                  >
+                    About
+                  </Link>
+                </SheetClose>
+
+                <SheetClose asChild>
+                  <Link
+                    href="/get-a-quote"
+                    className="py-2 text-gray-500 hover:text-gray-900"
+                  >
+                    Get A Quote
+                  </Link>
+                </SheetClose>
+
+                <SheetClose asChild>
+                  <Link
+                    href="/services"
+                    className="py-2 text-gray-500 hover:text-gray-900"
+                  >
+                    Services
+                  </Link>
+                </SheetClose>
+
+                <SheetClose asChild>
+                  <Link href="/contact">
+                    <Button size="xl">Contact us</Button>
+                  </Link>
+                </SheetClose>
 
                 <div className="mt-4 flex justify-end gap-4">
-                  <Link
-                    href="https://www.instagram.com/right_.target/"
-                    className="flex items-center gap-1 font-semibold"
-                  >
-                    <Image
-                      sizes="100vw"
-                      width={0}
-                      className="h-auto w-full  max-w-14 rounded-full"
-                      height={0}
-                      src="/instagram-icon.png"
-                      alt="Instagram Right Target"
-                    />
-                    <span className="sr-only">Instagram page</span>
-                  </Link>
-                  <Link
-                    href="https://www.facebook.com/profile.php?id=61555770274333"
-                    className="flex items-center gap-2 font-semibold"
-                  >
-                    <Image
-                      sizes="100vw"
-                      width={0}
-                      className="h-auto w-full  max-w-9"
-                      height={0}
-                      src="/facebook-icon.png"
-                      alt="Facebook Right Target"
-                    />
+                  <SheetClose asChild>
+                    <Link
+                      href="https://www.instagram.com/right_.target/"
+                      className="flex items-center gap-1 font-semibold"
+                    >
+                      <Image
+                        sizes="100vw"
+                        width={0}
+                        className="h-auto w-full  max-w-14 rounded-full"
+                        height={0}
+                        src="/instagram-icon.png"
+                        alt="Instagram Right Target"
+                      />
+                      <span className="sr-only">Instagram page</span>
+                    </Link>
+                  </SheetClose>
 
-                    <span className="sr-only">Facebook page</span>
-                  </Link>
+                  <SheetClose asChild>
+                    <Link
+                      href="https://www.facebook.com/profile.php?id=61555770274333"
+                      className="flex items-center gap-2 font-semibold"
+                    >
+                      <Image
+                        sizes="100vw"
+                        width={0}
+                        className="h-auto w-full  max-w-9"
+                        height={0}
+                        src="/facebook-icon.png"
+                        alt="Facebook Right Target"
+                      />
+
+                      <span className="sr-only">Facebook page</span>
+                    </Link>
+                  </SheetClose>
                 </div>
               </nav>
             </SheetContent>
