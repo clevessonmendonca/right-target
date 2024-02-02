@@ -159,6 +159,10 @@ export function FormProvider({ children }: IProps) {
 
   function onHandleNext() {
     setStep((prev) => prev + 1)
+
+    const section = document.querySelector('#form')
+
+    if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   function onHandleBack() {

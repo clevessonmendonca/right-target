@@ -17,13 +17,13 @@ export async function POST(req: NextRequest) {
     //   react: EmailTemplateClient(body) as ReactElement,
     // })
 
-    const { data } = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: 'New Budget <onboarding@resend.dev>',
       to: ['righttarget.contact@gmail.com'],
       subject: 'Right Target',
       react: ReceivedEmailTemplate(body) as ReactElement,
     })
-
+    console.log(error)
     return Response.json(data)
   } catch (error) {
     return Response.json({ error })

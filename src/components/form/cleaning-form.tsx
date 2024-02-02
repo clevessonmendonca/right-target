@@ -11,7 +11,7 @@ import { CleaningServicesForm } from '@/components/form/cleaning-service'
 import { HomeDetailsForm } from '@/components/form/home-details-form'
 import { toast } from 'sonner'
 import axios from 'axios'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import StepIndicator from './step-indicator'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -106,7 +106,7 @@ function ActiveStepFormComponent() {
 export const CleaningForm = () => {
   return (
     <FormProvider>
-      <Card className="mx-auto max-w-screen-md p-12">
+      <Card id="form" className="mx-auto max-w-screen-md p-12">
         <div className="mb-8 flex items-center justify-between">
           <div>
             <h2 className="text-3xl font-bold tracking-tight">GET A QUOTE!</h2>

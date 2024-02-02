@@ -41,7 +41,8 @@ const homeDetailsFormSchema = z.object({
     .min(1, { message: 'Please specify how often do you cook.' }),
   hasPets: z
     .string()
-    .min(1, { message: 'Please specify do you have any pets.' }),
+    .min(1, { message: 'Please specify do you have any pets.' })
+    .optional(),
 })
 
 type HomeDetailsFormSchema = z.infer<typeof homeDetailsFormSchema>
@@ -254,7 +255,10 @@ export const HomeDetailsForm = () => {
 
       <div className="w-full">
         <label className="font-bold">
-          Do you have any pets? <Badge variant="outline">Optional</Badge>
+          Do you have any pets?{' '}
+          <Badge variant="outline" className="mb-2">
+            Optional
+          </Badge>
         </label>
         <Input {...register('hasPets')} />
         {errors.hasPets && (
