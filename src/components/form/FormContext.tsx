@@ -158,7 +158,6 @@ export function FormProvider({ children }: IProps) {
   const [step, setStep] = useState(1)
 
   function onHandleNext() {
-    console.log(formData)
     setStep((prev) => prev + 1)
   }
 

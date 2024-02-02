@@ -69,7 +69,9 @@ export const HomeDetailsForm = () => {
     >
       <div className="flex gap-4">
         <div className="w-full">
-          <label htmlFor="sqft">SQ FT:</label>
+          <label className="font-bold" htmlFor="sqft">
+            SQ FT:
+          </label>
           <Select
             onValueChange={(value: string) => {
               setValue('sqft', value, { shouldValidate: true })
@@ -95,7 +97,9 @@ export const HomeDetailsForm = () => {
         </div>
 
         <div className="w-full">
-          <label htmlFor="homeStyle">My Home Style:</label>
+          <label className="font-bold" htmlFor="homeStyle">
+            My Home Style:
+          </label>
           <Select
             onValueChange={(value: string) => {
               setValue('homeStyle', value, { shouldValidate: true })
@@ -119,7 +123,9 @@ export const HomeDetailsForm = () => {
 
       <div className="flex items-end gap-4">
         <div className="w-full">
-          <label htmlFor="levels">Number of Levels:</label>
+          <label className="font-bold" htmlFor="levels">
+            Number of Levels:
+          </label>
           <Select
             onValueChange={(value: string) => {
               setValue('levels', value, { shouldValidate: true })
@@ -139,7 +145,9 @@ export const HomeDetailsForm = () => {
         </div>
 
         <div className="w-full">
-          <label htmlFor="numOfBaths">Number of Bathrooms:</label>
+          <label className="font-bold" htmlFor="numOfBaths">
+            Number of Bathrooms:
+          </label>
           <Select
             onValueChange={(value: string) => {
               setValue('numOfBaths', value, { shouldValidate: true })
@@ -165,7 +173,9 @@ export const HomeDetailsForm = () => {
 
       <div className="flex items-end gap-4">
         <div className="w-full">
-          <label htmlFor="numOfBeds">Number of Bedrooms:</label>
+          <label className="font-bold" htmlFor="numOfBeds">
+            Number of Bedrooms:
+          </label>
           <Select
             onValueChange={(value: string) => {
               setValue('numOfBeds', value, { shouldValidate: true })
@@ -188,7 +198,9 @@ export const HomeDetailsForm = () => {
           </p>
         </div>
         <div className="w-full">
-          <label htmlFor="basement">Basement Type:</label>
+          <label className="font-bold" htmlFor="basement">
+            Basement Type:
+          </label>
           <Select
             onValueChange={(value: string) => {
               setValue('basement', value, { shouldValidate: true })
@@ -209,7 +221,7 @@ export const HomeDetailsForm = () => {
       </div>
 
       <div>
-        <label className="">Floor Type:</label>
+        <label className="font-bold">Floor Type:</label>
         <Input {...register('floorType')} />
         {errors.floorType && (
           <p className="text-sm text-destructive">{errors.floorType.message}</p>
@@ -218,7 +230,9 @@ export const HomeDetailsForm = () => {
 
       <div className="flex flex-col items-end gap-4 md:flex-row">
         <div className="w-full">
-          <label className="">How many house members live in the house?</label>
+          <label className="font-bold">
+            How many house members live in the house?
+          </label>
           <Input {...register('numOfHouseMembers')} />
           {errors.numOfHouseMembers && (
             <p className="text-sm text-destructive">
@@ -227,7 +241,7 @@ export const HomeDetailsForm = () => {
           )}
         </div>
         <div className="w-full">
-          <label className="">How often do you cook?</label>
+          <label className="font-bold">How often do you cook?</label>
           <Input {...register('cookingFrequency')} />
           {errors.cookingFrequency && (
             <p className="text-sm text-destructive">
@@ -238,7 +252,7 @@ export const HomeDetailsForm = () => {
       </div>
 
       <div className="w-full">
-        <label className="">Do you have any pets?</label>
+        <label className="font-bold">Do you have any pets?</label>
         <Input {...register('hasPets')} />
         {errors.hasPets && (
           <p className="text-sm text-destructive">{errors.hasPets.message}</p>
@@ -247,7 +261,7 @@ export const HomeDetailsForm = () => {
 
       <div
         className="flex 
-       gap-6"
+        justify-end gap-6"
       >
         <Button
           type="button"
@@ -259,7 +273,7 @@ export const HomeDetailsForm = () => {
           Back
         </Button>
         <Button type="submit" className="font-bold" size="xl">
-          Next
+          Confirm
         </Button>
       </div>
     </form>

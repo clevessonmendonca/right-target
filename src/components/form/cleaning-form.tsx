@@ -13,6 +13,8 @@ import { toast } from 'sonner'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { Button } from '../ui/button'
+import StepIndicator from './step-indicator'
+import { Separator } from '../ui/separator'
 
 function ActiveStepFormComponent() {
   const { step, formData } = useFormState()
@@ -42,11 +44,6 @@ function ActiveStepFormComponent() {
     }
   }
 
-  useEffect(() => {
-    if (step === 4) {
-      handleCleaningForm(formData)
-    }
-  }, [step, formData])
   switch (step) {
     case 1:
       return <UserNameForm />
@@ -56,10 +53,14 @@ function ActiveStepFormComponent() {
       return <HomeDetailsForm />
     case 4:
       return (
-        <>
-          <p>Sending your book now.</p>
-          <Button onClick={() => handleCleaningForm(formData)}>Resend</Button>
-        </>
+        <div className="text-center">
+          <h2 className="mb-2 text-xl font-semibold">Thank you!</h2>
+          <p>
+            Thanks for requesting a quote with us! We appreciate your interest
+            in our cleaning services. Our team will review your information, and
+            we&aposll get back to you with a detailed budget shortly.
+          </p>
+        </div>
       )
     default:
       return null
@@ -70,16 +71,18 @@ export const CleaningForm = () => {
   return (
     <FormProvider>
       <Card className="mx-auto max-w-screen-md p-12">
-        <div className="mb-8">
-          <h2 className="text-3xl font-bold tracking-tight">
-            Elevate Your Living Space with Sparkling Cleanliness!
-          </h2>
-          <p className="mt-2 text-sm text-foreground">
-            Experience the joy of a spotless home. Fill out the form below, and
-            let us take care of the cleaning, so you can enjoy more of life!
-          </p>
+        <div className="mb-8 flex items-center justify-between">
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight">GET A QUOTE!</h2>
+            <p className="mt-2 text-sm text-foreground">
+              Experience the joy of a spotless home. Fill out the form below,
+              and let us take care of the cleaning, so you can{' '}
+              <span className="font-semibold">enjoy more of life!</span>
+            </p>
+          </div>
         </div>
 
+        <StepIndicator />
         <ActiveStepFormComponent />
       </Card>
     </FormProvider>

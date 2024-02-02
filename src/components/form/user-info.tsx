@@ -12,7 +12,7 @@ const userFormSchema = z.object({
   phone: z.string().min(10, 'Cell phone number must have at least 10 digits'),
   addressLine1: z.string().min(2, 'Address is required'),
   addressLine2: z.string().optional(),
-  city: z.string().min(2, 'City is required'),
+  city: z.string().min(2, 'City is rfont-boldequired'),
   state: z.string().min(2, 'State is required'),
   postalCode: z.string().min(2, 'Postal code is required'),
 })
@@ -41,7 +41,7 @@ export const UserNameForm = () => {
       className="flex flex-col gap-4"
     >
       <div>
-        <label className="" htmlFor="name">
+        <label className="font-semibold" htmlFor="name">
           Full Name:
         </label>
         <Input {...register('fullName')} />
@@ -51,7 +51,9 @@ export const UserNameForm = () => {
       </div>
 
       <div>
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="email" className="font-semibold">
+          Email:
+        </label>
         <Input {...register('email')} />
         {errors.email && (
           <p className="text-sm text-destructive">{errors.email.message}</p>
@@ -59,7 +61,9 @@ export const UserNameForm = () => {
       </div>
 
       <div>
-        <label htmlFor="phone">Phone Number:</label>
+        <label htmlFor="phone" className="font-semibold">
+          Phone Number:
+        </label>
         <Input {...register('phone')} />
         {errors.phone && (
           <p className="text-sm text-destructive">{errors.phone.message}</p>
@@ -67,7 +71,9 @@ export const UserNameForm = () => {
       </div>
 
       <div>
-        <label htmlFor="address">Address Line 1:</label>
+        <label htmlFor="address" className="font-semibold">
+          Address Line 1:
+        </label>
         <Input {...register('addressLine1')} />
         {errors.addressLine1 && (
           <p className="text-sm text-destructive">
@@ -77,7 +83,10 @@ export const UserNameForm = () => {
       </div>
 
       <div>
-        <label htmlFor="address" className="mb-1 flex items-center gap-2">
+        <label
+          htmlFor="address"
+          className="mb-1 flex items-center gap-2 font-semibold"
+        >
           Address Line 2: <Badge variant="outline">Optional</Badge>
         </label>
         <Input {...register('addressLine2')} />
@@ -88,7 +97,7 @@ export const UserNameForm = () => {
         )}
       </div>
 
-      <div className="flex justify-around gap-4">
+      <div className="flex justify-around gap-4 font-semibold">
         <div className="w-full">
           <label htmlFor="city">City:</label>
           <Input {...register('city')} />
@@ -97,8 +106,10 @@ export const UserNameForm = () => {
           )}
         </div>
         <div className="w-full">
-          <label htmlFor="state">State:</label>
-          <Input {...register('state')} />
+          <label htmlFor="state" className="font-semibold">
+            State:
+          </label>
+          <Input id="state" {...register('state')} />
           {errors.state && (
             <p className="text-sm text-destructive">{errors.state.message}</p>
           )}
@@ -106,7 +117,9 @@ export const UserNameForm = () => {
       </div>
 
       <div className="max-w-xs">
-        <label htmlFor="postalCode">Postal Code:</label>
+        <label htmlFor="postalCode" className="font-semibold">
+          Postal Code:
+        </label>
         <Input {...register('postalCode')} />
         {errors.postalCode && (
           <p className="text-sm text-destructive">
