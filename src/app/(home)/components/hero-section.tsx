@@ -73,24 +73,6 @@ export const HeroSection = () => {
             <DialogContent className="p-0">
               <ScrollArea className="max-h-screen md:max-h-[80vh]">
                 <CleaningForm />
-                <DialogClose className="absolute right-2 top-10 rounded-full p-2 opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground md:hidden">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-x h-4 w-4"
-                  >
-                    <path d="M18 6 6 18"></path>
-                    <path d="m6 6 12 12"></path>
-                  </svg>
-                  <span className="sr-only">Close</span>
-                </DialogClose>
               </ScrollArea>
             </DialogContent>
           </Dialog>

@@ -56,19 +56,31 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1, duration: 0.4 }}
           >
-            <Card className="mt-4 flex w-full flex-col gap-4 px-6 py-12">
+            <Card className="mt-4 flex w-full flex-col gap-4 p-4">
               <Link
                 href="tel:+19735830823"
-                className="flex flex-wrap items-center justify-center gap-4 text-xl font-medium sm:justify-normal"
+                className="flex w-full flex-wrap items-center justify-between gap-4 rounded-full border px-4 py-4 text-xl font-medium hover:bg-primary/20 sm:justify-normal"
               >
-                <PhoneIcon className="text-primary" /> (973) 583-0823
+                <PhoneIcon className="absolute text-primary" />{' '}
+                <span className="flex-1 px-12 text-center">(973) 583-0823</span>
               </Link>
               <Link
                 href="mailto:rightarget.contact@gmail.com"
-                className="flex flex-wrap items-center justify-center gap-4 text-xl font-medium sm:justify-normal"
+                className="flex w-full flex-wrap items-center justify-between gap-4 rounded-full border px-4 py-4 text-xl font-medium hover:bg-primary/20 sm:justify-normal"
               >
-                <MailIcon className="text-primary" />{' '}
-                rightarget.contact@gmail.com
+                <MailIcon className="absolute text-primary" />{' '}
+                <span className="flex-1 px-12 text-center">
+                  contact@rightargetservice.com
+                </span>
+              </Link>
+              <Link
+                href="mailto:rightarget.contact@gmail.com"
+                className="flex w-full flex-wrap items-center justify-between gap-4 rounded-full border px-4 py-4 text-xl font-medium hover:bg-primary/20 sm:justify-normal"
+              >
+                <MailIcon className="absolute text-primary" />{' '}
+                <span className="flex-1 px-12 text-center">
+                  rightarget.contact@gmail.com
+                </span>
               </Link>
             </Card>
           </motion.div>
