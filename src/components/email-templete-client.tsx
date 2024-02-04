@@ -112,7 +112,7 @@ const EmailTemplateClient: React.FC<Readonly<MergedFormData>> = ({
           </li>
         </ul>
 
-        <span className="h-[2px] h-full w-full shrink-0 bg-border" />
+        <span className="h-[2px] w-full shrink-0 bg-border" />
 
         <p>
           <strong>Services Requested:</strong> {selectedServices.join(', ')}
@@ -137,12 +137,12 @@ const EmailTemplateClient: React.FC<Readonly<MergedFormData>> = ({
       </p>
       <div>
         <p>Best regards,</p>
-        <Link
+        <a
           href="https://righttargetservice.com"
           className="text-lg font-semibold"
         >
           Right Target
-        </Link>
+        </a>
       </div>
     </div>
   )
