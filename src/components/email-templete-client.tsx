@@ -5,8 +5,7 @@ import Link from 'next/link'
 const EmailTemplateClient: React.FC<Readonly<MergedFormData>> = ({
   email,
   phone,
-  addressLine1,
-  addressLine2,
+  address,
   basement,
   city,
   cookingFrequency,
@@ -27,7 +26,7 @@ const EmailTemplateClient: React.FC<Readonly<MergedFormData>> = ({
   additionalServices,
 }) => {
   // Combine address details
-  const address = `${addressLine1}, ${addressLine2}, ${city}, ${state} ${postalCode}`
+  const addressFull = `${address}, ${city}, ${state} ${postalCode}`
 
   // Combine selected services
   const selectedServices = Object.entries(iAmLookingToHave)
@@ -74,7 +73,7 @@ const EmailTemplateClient: React.FC<Readonly<MergedFormData>> = ({
             <strong>Phone:</strong> {phone}
           </li>
           <li>
-            <strong>Address:</strong> {address}
+            <strong>Address:</strong> {addressFull}
           </li>
         </ul>
         <p className="text-xl  text-primary">

@@ -4,8 +4,7 @@ import { MergedFormData } from './form/FormContext'
 const ReceivedEmailTemplate: React.FC<MergedFormData> = ({
   email,
   phone,
-  addressLine1,
-  addressLine2,
+  address,
   basement,
   city,
   cookingFrequency,
@@ -26,7 +25,7 @@ const ReceivedEmailTemplate: React.FC<MergedFormData> = ({
   additionalServices,
 }) => {
   // Combine address details
-  const address = `${addressLine1}, ${addressLine2}, ${city}, ${state} ${postalCode}`
+  const addressFull = `${address}, ${city}, ${state} ${postalCode}`
 
   // Combine selected services
   const selectedServices = Object.entries(iAmLookingToHave)
@@ -76,7 +75,7 @@ const ReceivedEmailTemplate: React.FC<MergedFormData> = ({
             <strong>Phone:</strong> {phone}
           </li>
           <li>
-            <strong>Address:</strong> {address}
+            <strong>Address:</strong> {addressFull}
           </li>
         </ul>
         <p className="text-xl  text-primary">
@@ -115,7 +114,7 @@ const ReceivedEmailTemplate: React.FC<MergedFormData> = ({
           </li>
         </ul>
 
-        <span className="h-[2px] h-full w-full shrink-0 bg-border" />
+        <span className="h-[2px] w-full shrink-0 bg-border" />
 
         <p>
           <strong>Services Requested:</strong> {selectedServices.join(', ')}

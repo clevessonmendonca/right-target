@@ -59,23 +59,16 @@ export default function Contact() {
             <Card className="mt-4 flex w-full flex-col gap-4 px-6 py-12">
               <Link
                 href="tel:+19735830823"
-                className="xs:justify-normal flex flex-wrap items-center justify-center gap-4 text-xl font-medium"
+                className="flex flex-wrap items-center justify-center gap-4 text-xl font-medium sm:justify-normal"
               >
                 <PhoneIcon className="text-primary" /> (973) 583-0823
               </Link>
               <Link
                 href="mailto:rightarget.contact@gmail.com"
-                className="xs:justify-normal flex flex-wrap items-center justify-center gap-4 text-xl font-medium"
+                className="flex flex-wrap items-center justify-center gap-4 text-xl font-medium sm:justify-normal"
               >
                 <MailIcon className="text-primary" />{' '}
                 rightarget.contact@gmail.com
-              </Link>
-              <Link
-                href="#"
-                className="xs:justify-normal flex flex-wrap items-center justify-center gap-4 text-xl font-medium"
-              >
-                <MapPinIcon className="text-primary" /> 123 Cleaning Street,
-                Cityville, USA
               </Link>
             </Card>
           </motion.div>

@@ -4,14 +4,12 @@ import { useFormState } from './FormContext'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { Badge } from '../ui/badge'
 
 const userFormSchema = z.object({
   fullName: z.string().min(2, 'First name must be at least 2 characters'),
   email: z.string().email('Enter a valid email address'),
   phone: z.string().min(10, 'Cell phone number must have at least 10 digits'),
-  addressLine1: z.string().min(2, 'Address is required'),
-  addressLine2: z.string().optional(),
+  address: z.string().min(2, 'Address is required'),
   city: z.string().min(2, 'City is rfont-boldequired'),
   state: z.string().min(2, 'State is required'),
   postalCode: z.string().min(2, 'Postal code is required'),
@@ -72,28 +70,11 @@ export const UserNameForm = () => {
 
       <div>
         <label htmlFor="address" className="font-semibold">
-          Address Line 1:
+          Address:
         </label>
-        <Input {...register('addressLine1')} />
-        {errors.addressLine1 && (
-          <p className="text-sm text-destructive">
-            {errors.addressLine1.message}
-          </p>
-        )}
-      </div>
-
-      <div>
-        <label
-          htmlFor="address"
-          className="mb-1 flex items-center gap-2 font-semibold"
-        >
-          Address Line 2: <Badge variant="outline">Optional</Badge>
-        </label>
-        <Input {...register('addressLine2')} />
-        {errors.addressLine2 && (
-          <p className="text-sm text-destructive">
-            {errors.addressLine2.message}
-          </p>
+        <Input {...register('address')} />
+        {errors.address && (
+          <p className="text-sm text-destructive">{errors.address.message}</p>
         )}
       </div>
 
@@ -118,7 +99,7 @@ export const UserNameForm = () => {
 
       <div className="max-w-xs">
         <label htmlFor="postalCode" className="font-semibold">
-          Postal Code:
+          Zip Code:
         </label>
         <Input {...register('postalCode')} />
         {errors.postalCode && (

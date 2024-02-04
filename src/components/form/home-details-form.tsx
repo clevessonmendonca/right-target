@@ -39,10 +39,7 @@ const homeDetailsFormSchema = z.object({
   cookingFrequency: z
     .string()
     .min(1, { message: 'Please specify how often do you cook.' }),
-  hasPets: z
-    .string()
-    .min(1, { message: 'Please specify do you have any pets.' })
-    .optional(),
+  hasPets: z.string().optional(),
 })
 
 type HomeDetailsFormSchema = z.infer<typeof homeDetailsFormSchema>

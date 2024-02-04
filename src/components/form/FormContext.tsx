@@ -11,8 +11,7 @@ interface ExistingFormData {
   fullName: string
   email: string
   phone: string
-  addressLine1: string
-  addressLine2: string
+  address: string
   city: string
   state: string
   postalCode: string
@@ -69,8 +68,7 @@ const FormContext = createContext<IFormContext>({
     fullName: '',
     email: '',
     phone: '',
-    addressLine1: '',
-    addressLine2: '',
+    address: '',
     city: '',
     state: '',
     postalCode: '',
@@ -121,8 +119,7 @@ export function FormProvider({ children }: IProps) {
     fullName: '',
     email: '',
     phone: '',
-    addressLine1: '',
-    addressLine2: '',
+    address: '',
     city: '',
     state: '',
     postalCode: '',
