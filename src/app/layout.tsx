@@ -23,11 +23,50 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.png" sizes="any" />
         <meta
           name="google-site-verification"
           content="VxeuB8TJ-CEFTosdIEd6sPNsGm2FWPKNYzYVVrcVKpo"
         />
-        <link rel="icon" href="/favicon.png" sizes="any" />
+        <meta
+          name="keywords"
+          content="cleaning, cleaning services, residential cleaning, commercial cleaning"
+        />
+        <meta name="author" content="Right Target" />
+        {/* Open Graph Tags */}
+        <meta
+          property="og:title"
+          content="Right Target - Professional Cleaning Services"
+        />
+        <meta
+          property="og:description"
+          content="We offer professional cleaning services for homes and businesses."
+        />
+        <meta
+          property="og:image"
+          content="/beautiful-photo-of-a-modern-home-kitchen.jpg"
+        />
+        <meta
+          property="og:url"
+          content="/beautiful-photo-of-a-modern-home-kitchen.jpg"
+        />
+        {/* Facebook and Instagram Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta
+          property="article:author"
+          content="https://www.facebook.com/profile.php?id=61555770274333"
+        />
+        <meta
+          property="article:publisher"
+          content="https://www.facebook.com/profile.php?id=61555770274333"
+        />
+        <meta property="og:site_name" content="Right Target" />
+        <meta
+          property="og:see_also"
+          content="https://www.instagram.com/right_.target/"
+        />
+        <link rel="canonical" href="https://righttargetservice.com/" />
       </head>
       <Script
         async
