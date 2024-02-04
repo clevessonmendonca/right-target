@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     })
 
     await resend.emails.send({
-      from: 'New Budget <onboarding@resend.dev>',
+      from: 'New Budget <contact@righttargetservice.com>',
       to: ['contact@righttargetservice.com'],
       subject: 'Right Target',
       react: ReceivedEmailTemplate(body) as ReactElement,
