@@ -23,6 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta
+          name="google-site-verification"
+          content="VxeuB8TJ-CEFTosdIEd6sPNsGm2FWPKNYzYVVrcVKpo"
+        />
         <link rel="icon" href="/favicon.png" sizes="any" />
       </head>
       <Script

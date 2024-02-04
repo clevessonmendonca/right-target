@@ -25,7 +25,7 @@ export default function ServicesPage() {
           <span className="text-primary">DIFFERENT</span> PAYMENT METHODS
         </h3>
 
-        <div className="mt-6 flex justify-around gap-4">
+        <div className="mt-6 flex flex-wrap items-center justify-around gap-4">
           <div className="flex flex-col items-center gap-4">
             <Image
               sizes="100vw"
