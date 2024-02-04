@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { PhoneIcon, MailIcon, MapPinIcon } from 'lucide-react'
+import { PhoneIcon, MailIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { ScrollArea } from '@/components/ui/scroll-area'
@@ -31,7 +31,7 @@ export default function Contact() {
           >
             Get in Touch
           </motion.h2>
-          <p className="w-full max-w-md text-center text-xs text-muted-foreground">
+          <p className="w-full max-w-md text-center text-xs text-white">
             Have questions or want to schedule a cleaning service? Reach out to
             us through the options below.
           </p>
