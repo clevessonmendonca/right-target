@@ -31,7 +31,7 @@ export default function Contact() {
           >
             Get in Touch
           </motion.h2>
-          <p className="w-full max-w-md text-center text-xs text-white">
+          <p className="w-full max-w-md text-center text-xs">
             Have questions or want to schedule a cleaning service? Reach out to
             us through the options below.
           </p>
