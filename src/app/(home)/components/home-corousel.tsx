@@ -23,6 +23,10 @@ const images = [
     imageSrc:
       '/photo-of-the-interior-of-a-modern-kitchen-with-large-windows.jpg',
   },
+  {
+    name: 'Regular Cleaning Service',
+    imageSrc: '/regular-cleaning-service.jpg',
+  },
 ]
 
 export const HomeCarousel = () => {

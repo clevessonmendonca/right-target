@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { PhoneIcon, MailIcon } from 'lucide-react'
+import { PhoneIcon, MailIcon, SparklesIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { ScrollArea } from '@/components/ui/scroll-area'
@@ -71,6 +71,15 @@ export default function Contact() {
                 <MailIcon className="absolute text-primary" />{' '}
                 <span className="flex-1 px-12 text-center">
                   contact@rightargetservice.com
+                </span>
+              </Link>
+              <Link
+                href="/services"
+                className="flex w-full flex-wrap items-center justify-between gap-4 rounded-full border px-4 py-4 text-xl font-medium hover:bg-primary/20 sm:justify-normal"
+              >
+                <SparklesIcon className="absolute text-primary" />{' '}
+                <span className="flex-1 px-12 text-center">
+                  Explore our cleaning services
                 </span>
               </Link>
               <Link

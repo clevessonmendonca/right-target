@@ -12,7 +12,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Right Target - Cleaning Services',
   description:
-    'Professional and reliable residential cleaning service. Transform your home with Right Target.',
+    'Discover the exceptional cleaning services at Right Target. We specialize in providing professional and reliable cleaning solutions for homes and businesses. Elevate your living and working spaces with our experienced team and tailored cleaning packages. Your satisfaction is our priority. Contact us today for a cleaner, healthier environment!',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export default function RootLayout({
