@@ -85,6 +85,20 @@ export default function RootLayout({
             `,
         }}
       />
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=AW-11487384613"
+      ></Script>
+      <Script
+        dangerouslySetInnerHTML={{
+          __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-11487384613');
+            `,
+        }}
+      />
       <body className={inter.className}>
         <div className="flex h-full flex-col">
           <Header />
