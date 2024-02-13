@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from '@/components/ui/button'
 import { useFormState } from './FormContext'
 import { z } from 'zod'
@@ -12,6 +14,8 @@ import {
 } from '../ui/select'
 import { Input } from '../ui/input'
 import { Badge } from '../ui/badge'
+import { useEffect } from 'react'
+import ReactGA from 'react-ga'
 
 const homeDetailsFormSchema = z.object({
   sqft: z.string().refine((value) => !!value, {
@@ -58,8 +62,19 @@ export const HomeDetailsForm = () => {
 
   const onHandleFormSubmit = async (data: HomeDetailsFormSchema) => {
     setFormData((prev) => ({ ...prev, ...data }))
+
+    ReactGA.event({
+      category: 'Conversão',
+      action: 'Enviar',
+      label: 'AW-11139734703/D6zhCOOO8JEZEK-5678p',
+    })
+
     onHandleNext()
   }
+
+  useEffect(() => {
+    ReactGA.initialize('GTM-KXCK2GK5')
+  }, [])
 
   return (
     <form
