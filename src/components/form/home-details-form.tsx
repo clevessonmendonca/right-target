@@ -66,14 +66,14 @@ export const HomeDetailsForm = () => {
     ReactGA.event({
       category: 'Conversão',
       action: 'Enviar',
-      label: 'AW-11139734703/D6zhCOOO8JEZEK-5678p',
+      label: 'AW-11139734703',
     })
 
     onHandleNext()
   }
 
   useEffect(() => {
-    ReactGA.initialize('GTM-KXCK2GK5')
+    ReactGA.initialize('AW-11139734703')
   }, [])
 
   return (
