@@ -4,6 +4,7 @@ import './globals.css'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/react'
 import Script from 'next/script'
 import { Toaster } from '@/components/ui/sonner'
@@ -142,6 +143,7 @@ fbq('track', 'PageView');
           <Footer />
           <SpeedInsights />
           <Analytics />
+          <GoogleAnalytics gaId="G-HT8CZ8BYCP" />
           <Toaster richColors theme="light" />
         </div>
       </body>
