@@ -109,7 +109,9 @@ export const CleaningForm = () => {
       <Card id="form" className="mx-auto max-w-screen-md p-12">
         <div className="mb-8 flex items-center justify-between">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight">GET A QUOTE!</h2>
+            <h2 className="text-3xl font-bold tracking-tight">
+              Book Your Cleaning And Relax
+            </h2>
             <p className="mt-2 text-sm text-foreground">
               Experience the joy of a spotless home. Fill out the form below,
               and let us take care of the cleaning, so you can{' '}
