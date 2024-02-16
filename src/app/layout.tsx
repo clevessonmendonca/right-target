@@ -11,7 +11,7 @@ import { Toaster } from '@/components/ui/sonner'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const GTM_ID = 'GTM-TX2RNB85'
+const GTM_ID = 'GTM-KXCK2GK5'
 
 export const metadata: Metadata = {
   title: 'Right Target - Cleaning Services',
