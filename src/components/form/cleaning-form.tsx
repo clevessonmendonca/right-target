@@ -21,7 +21,7 @@ function ActiveStepFormComponent() {
   const { step, formData } = useFormState()
 
   useEffect(() => {
-    if (step === 4) {
+    if (step === 4 || step === 2) {
       handleCleaningForm(formData)
     }
   }, [step, formData])
@@ -30,7 +30,7 @@ function ActiveStepFormComponent() {
     try {
       const response = await axios.post('api/send', data)
 
-      if (!response.data.error)
+      if (!response.data.error && step === 4)
         return toast.success('Email send secess!', {
           description: 'Your email is sent successfully.',
         })

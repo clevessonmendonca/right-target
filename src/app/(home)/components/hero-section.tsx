@@ -1,12 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogTrigger,
-} from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { PhoneIcon } from 'lucide-react'
 import Link from 'next/link'
 import React, { useEffect } from 'react'
@@ -55,8 +50,8 @@ export const HeroSection = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.1, duration: 0.4 }}
       >
-        <h1 className="max-w-md text-4xl font-bold tracking-tight md:text-5xl">
-          Impeccable Cleaning Services Tailored for You.
+        <h1 className="max-w-lg text-4xl font-bold tracking-tight md:text-5xl">
+          4+ Years of Professional Cleaning
         </h1>
         <p className="max-w-[32rem] text-xs text-muted-foreground">
           Right Target offers top-notch cleaning services performed by
@@ -67,7 +62,7 @@ export const HeroSection = () => {
           <Dialog>
             <DialogTrigger asChild>
               <Button size="xl" className="text-xl font-bold">
-                Book now
+                Get Estimate
               </Button>
             </DialogTrigger>
             <DialogContent className="p-0">
