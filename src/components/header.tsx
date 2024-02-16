@@ -13,7 +13,7 @@ import Image from 'next/image'
 export const Header = () => {
   return (
     <header className="mx-auto w-full max-w-screen-2xl">
-      <Card className="flex items-center justify-between border-none px-[1.875rem] py-[1rem]">
+      <Card className="flex items-center justify-between border-none px-4 py-[1rem] md:px-[1.875rem]">
         <Link href="/">
           <Image
             sizes="100vw"
