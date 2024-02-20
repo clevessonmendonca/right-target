@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 export default function BookNow() {
   return (
     <div>
-      <div className="bg-hero-pattern bg-black bg-cover bg-center bg-no-repeat ">
+      <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat ">
         <HeroSection />
       </div>
 
