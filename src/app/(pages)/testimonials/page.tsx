@@ -1,7 +1,7 @@
 import React from 'react'
 import { Badge } from '@/components/ui/badge'
-import { TestimonialsCarousel } from '../../components/testimonials-carousel'
-import { CleaningForm } from '../../components/form/cleaning-form'
+import { TestimonialsCarousel } from '@/components/testimonials-carousel'
+import { CleaningForm } from '@/components/form/cleaning-form'
 
 export default function TestimonialsPage() {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import { CleaningForm } from '../../components/form/cleaning-form'
+import { CleaningForm } from '@/components/form/cleaning-form'
 import { ServicesCard } from './components/services-card'
 import Image from 'next/image'
 import { Card } from '@/components/ui/card'

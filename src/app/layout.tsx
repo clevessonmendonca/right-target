@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/react'
@@ -138,9 +136,7 @@ fbq('track', 'PageView');
         />
 
         <div className="flex h-full flex-col">
-          <Header />
           <div className="flex-1">{children}</div>
-          <Footer />
           <SpeedInsights />
           <Analytics />
           <GoogleAnalytics gaId="G-HT8CZ8BYCP" />

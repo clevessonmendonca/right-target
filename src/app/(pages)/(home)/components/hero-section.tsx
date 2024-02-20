@@ -5,10 +5,10 @@ import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { PhoneIcon } from 'lucide-react'
 import Link from 'next/link'
 import React, { useEffect } from 'react'
-import { CleaningForm } from '../../../components/form/cleaning-form'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { HomeCarousel } from './home-corousel'
 import { motion, useAnimation } from 'framer-motion'
+import { CleaningForm } from '@/components/form/cleaning-form'
 
 export const HeroSection = () => {
   const phoneIconControls = useAnimation()

@@ -2,8 +2,8 @@ import React from 'react'
 import { FastForward, SparklesIcon, UserCheck } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { TestimonialsCarousel } from '../../components/testimonials-carousel'
-import { CleaningForm } from '../../components/form/cleaning-form'
+import { TestimonialsCarousel } from '@/components/testimonials-carousel'
+import { CleaningForm } from '@/components/form/cleaning-form'
 import {
   Collapsible,
   CollapsibleContent,

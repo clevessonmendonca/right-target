@@ -1,12 +1,12 @@
 import { HeroSection } from './components/hero-section'
 import { Badge } from '@/components/ui/badge'
-import { CleaningForm } from '../../components/form/cleaning-form'
-import { TestimonialsCarousel } from '../../components/testimonials-carousel'
-import { AboutText } from '../about/components/about-text'
 import { Button } from '@/components/ui/button'
 import { ServicesCard } from '../services/components/services-card'
 import Link from 'next/link'
 import { ServicesSection } from './components/service-section'
+import { AboutText } from '../about/components/about-text'
+import { TestimonialsCarousel } from '@/components/testimonials-carousel'
+import { CleaningForm } from '@/components/form/cleaning-form'
 
 export default function Home() {
   return (
