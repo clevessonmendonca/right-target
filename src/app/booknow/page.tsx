@@ -1,9 +1,10 @@
-import { Card, CardContent } from '@/components/ui/card'
-import React from 'react'
-import { HeroSection } from './components/hero-section'
-import Image from 'next/image'
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
+import { Card, CardContent } from "@/components/ui/card";
+import React from "react";
+import { HeroSection } from "./components/hero-section";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowDown } from "lucide-react";
 
 export default function BookNow() {
   return (
@@ -80,7 +81,7 @@ export default function BookNow() {
         </div>
       </div>
 
-      <div className="mx-auto my-12 flex max-w-screen-lg flex-col gap-4 px-4 md:flex-row">
+      <div className="mx-auto my-12 flex max-w-screen-lg flex-col gap-4 px-4 px-4 md:flex-row">
         <div className="flex flex-col gap-3">
           <h2 className="text-6xl font-black tracking-tight">WHY US?</h2>
           <div className="space-y-4">
@@ -170,7 +171,44 @@ export default function BookNow() {
             <p className="max-w-md text-2xl font-bold">- Patrick</p>
           </CardContent>
         </Card>
+
+        <Link href="#form">
+          <Button
+            className="mx-auto flex flex-col py-10 font-medium md:mx-0"
+            size="xl"
+          >
+            <span className="text-3xl font-bold">BOOK NOW</span>
+            <span>click here</span>
+          </Button>
+        </Link>
+      </div>
+
+      <div className="mt-6 bg-orange-500/20 px-4 py-12">
+        <div className="flex flex-col items-center justify-center gap-4 text-center">
+          <h2 className="text-5xl font-black tracking-tight md:text-6xl">
+            READY TO RESTORE YOUR HOME?
+          </h2>
+          <h3 className="text-3xl font-medium">YOU ARE IN SAFE HANDS...</h3>
+          <ArrowDown className="h-6 w-6 animate-bounce font-bold" />
+
+          <div className="flex flex-col gap-4 md:flex-row">
+            <p className="text-3xl font-bold">FAST QUOTE</p>
+            <p className="text-3xl font-bold">Affordable Prices</p>
+            <p className="text-3xl font-bold">Licensed + Insured </p>
+            <p className="text-3xl font-bold">100% Satisfaction</p>
+          </div>
+
+          <Link href="#form">
+            <Button
+              className="mx-auto flex flex-col py-10 font-medium md:mx-0"
+              size="xl"
+            >
+              <span className="text-3xl font-bold">GET $30 OFF TODAY!</span>
+              <span>click here</span>
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
-  )
+  );
 }

@@ -96,7 +96,7 @@ export const UserForm = () => {
       </div>
 
       <Button type="submit" className="text-lg   font-bold" size="xl">
-        SUBMIT
+        SEND
       </Button>
     </form>
   )
