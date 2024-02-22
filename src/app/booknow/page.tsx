@@ -37,8 +37,8 @@ export default function BookNow() {
               width={0}
               className="h-auto w-full max-w-48 rounded-md px-5 md:max-w-60"
               height={0}
-              src="/regular-cleaning-service.jpg"
-              alt="regular-cleaning-service.jpg"
+              src="/asian-cleaning-service-woman-worker-cleaning-in-li-2021-12-09-20-22-54-utc.jpg"
+              alt="asian-cleaning-service-woman-worker-cleaning-in-li-2021-12-09-20-22-54-utc.jpg"
             />
             <h2 className="px-4 pt-4 text-2xl font-black">
               MAKE - READY CLEAN
@@ -50,8 +50,8 @@ export default function BookNow() {
               width={0}
               className="h-auto w-full max-w-48 rounded-md px-5 md:max-w-60"
               height={0}
-              src="/regular-cleaning-service.jpg"
-              alt="regular-cleaning-service.jpg"
+              src="/Deep-Cleaning-Whats-The-Difference.jpg"
+              alt="Deep-Cleaning-Whats-The-Difference.jpg"
             />
             <h2 className="px-4 pt-4 text-2xl font-black">DEEP CLEAN</h2>
           </Card>
@@ -61,8 +61,8 @@ export default function BookNow() {
               width={0}
               className="h-auto w-full max-w-48 rounded-md px-5 md:max-w-60"
               height={0}
-              src="/regular-cleaning-service.jpg"
-              alt="regular-cleaning-service.jpg"
+              src="/post-construction-cleaning-checklist.jpg"
+              alt="post-construction-cleaning-checklist.jpg"
             />
             <h2 className="px-4 pt-4 text-2xl font-black">POST CONSTRUCTION</h2>
           </Card>
@@ -127,10 +127,10 @@ export default function BookNow() {
         <Image
           sizes="100vw"
           width={0}
-          className="h-auto w-full max-w-lg"
+          className="mx-auto h-auto w-full max-w-lg bg-contain"
           height={0}
-          src="/regular-cleaning-service.jpg"
-          alt="regular-cleaning-service.jpg"
+          src="/women-cleaning.jpg"
+          alt="women-cleaning.jpg"
         />
       </div>
 

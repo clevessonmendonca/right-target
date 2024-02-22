@@ -49,10 +49,6 @@ export const UserForm = () => {
       toast.success('Email send secess!', {
         description: 'Your email is sent successfully.',
       })
-
-      toast.error('Error sending email', {
-        description: 'Please try again later',
-      })
     } catch (error) {
       toast.error('Error sending email', {
         description: 'Please try again later',
