@@ -1,10 +1,10 @@
-import { Card, CardContent } from "@/components/ui/card";
-import React from "react";
-import { HeroSection } from "./components/hero-section";
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
+import { Card, CardContent } from '@/components/ui/card'
+import React from 'react'
+import { HeroSection } from './components/hero-section'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { ArrowDown } from 'lucide-react'
 
 export default function BookNow() {
   return (
@@ -134,53 +134,57 @@ export default function BookNow() {
         />
       </div>
 
-      <div className="mx-auto my-14 flex max-w-screen-lg flex-col gap-4 px-4 md:flex-row">
-        <Card>
-          <CardContent className="flex flex-col justify-between space-y-3 px-8 py-12">
-            <p>⭐⭐⭐⭐⭐</p>
-            <p className="max-w-md font-bold">
-              &quot;Highly recommend! First time using their service, and they
-              did not disappoint! Was very pleased with the job well done! Great
-              service and easy to book. Everyone I communicated with was super
-              professional and very friendly.&quot;
-            </p>
+      <div>
+        <div className="mx-auto my-14 flex max-w-screen-lg flex-col gap-4 px-4 md:flex-row">
+          <Card>
+            <CardContent className="flex flex-col justify-between space-y-3 px-8 py-12">
+              <p>⭐⭐⭐⭐⭐</p>
+              <p className="max-w-md font-bold">
+                &quot;Highly recommend! First time using their service, and they
+                did not disappoint! Was very pleased with the job well done!
+                Great service and easy to book. Everyone I communicated with was
+                super professional and very friendly.&quot;
+              </p>
 
-            <p className="max-w-md text-2xl font-bold">- Cristina</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="flex flex-col justify-between  space-y-3 px-8 py-12">
-            <p>⭐⭐⭐⭐⭐</p>
-            <p className="max-w-md font-bold">
-              &quot;Amazing team of ladies, that worked together to clean my
-              home to MY STANDARDS. To me that is what makes the
-              difference..&quot;
-            </p>
+              <p className="max-w-md text-2xl font-bold">- Cristina</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="flex flex-col justify-between  space-y-3 px-8 py-12">
+              <p>⭐⭐⭐⭐⭐</p>
+              <p className="max-w-md font-bold">
+                &quot;Amazing team of ladies, that worked together to clean my
+                home to MY STANDARDS. To me that is what makes the
+                difference..&quot;
+              </p>
 
-            <p className="max-w-md text-2xl font-bold">- John</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="flex flex-col justify-between space-y-3 px-8 py-12">
-            <p>⭐⭐⭐⭐⭐</p>
-            <p className="max-w-md font-bold">
-              &quot;I have been getting cleanings for a while now matter fact,
-              they’re all good it’s worth the money for sure&quot;
-            </p>
+              <p className="max-w-md text-2xl font-bold">- John</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="flex flex-col justify-between space-y-3 px-8 py-12">
+              <p>⭐⭐⭐⭐⭐</p>
+              <p className="max-w-md font-bold">
+                &quot;I have been getting cleanings for a while now matter fact,
+                they’re all good it’s worth the money for sure&quot;
+              </p>
 
-            <p className="max-w-md text-2xl font-bold">- Patrick</p>
-          </CardContent>
-        </Card>
+              <p className="max-w-md text-2xl font-bold">- Patrick</p>
+            </CardContent>
+          </Card>
+        </div>
 
-        <Link href="#form">
-          <Button
-            className="mx-auto flex flex-col py-10 font-medium md:mx-0"
-            size="xl"
-          >
-            <span className="text-3xl font-bold">BOOK NOW</span>
-            <span>click here</span>
-          </Button>
-        </Link>
+        <div className="mx-auto flex w-full justify-center px-4">
+          <Link href="#form" className="">
+            <Button
+              className="mx-auto flex flex-col py-10 font-medium md:mx-0"
+              size="xl"
+            >
+              <span className="text-3xl font-bold">BOOK NOW</span>
+              <span>click here</span>
+            </Button>
+          </Link>
+        </div>
       </div>
 
       <div className="mt-6 bg-orange-500/20 px-4 py-12">
@@ -210,5 +214,5 @@ export default function BookNow() {
         </div>
       </div>
     </div>
-  );
+  )
 }
