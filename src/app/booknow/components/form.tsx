@@ -13,6 +13,7 @@ import {
 } from '@/components/ui/select'
 import axios from 'axios'
 import { toast } from 'sonner'
+import { useRouter } from 'next/navigation'
 
 const userFormSchema = z.object({
   firstName: z.string().min(2, 'First name must be at least 2 characters'),
@@ -42,6 +43,8 @@ export const UserForm = () => {
     resolver: zodResolver(userFormSchema),
   })
 
+  const router = useRouter()
+
   async function onHandleFormSubmit(data: FormSchema) {
     try {
       const response = await axios.post('api/ads-email', data)
@@ -49,6 +52,8 @@ export const UserForm = () => {
       toast.success('Email send secess!', {
         description: 'Your email is sent successfully.',
       })
+
+      router.push('/booknow/thank-you')
     } catch (error) {
       toast.error('Error sending email', {
         description: 'Please try again later',
