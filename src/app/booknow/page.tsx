@@ -13,7 +13,7 @@ export default function BookNow() {
         <HeroSection />
       </div>
 
-      <div className="bg-primary px-4 py-9 text-center">
+      <div id="3-step" className="bg-primary px-4 py-9 text-center">
         <h1 className="px-4 text-6xl font-black tracking-tight text-[#011A46] ">
           WE CLEAN!
         </h1>
@@ -81,7 +81,10 @@ export default function BookNow() {
         </div>
       </div>
 
-      <div className="mx-auto my-12 flex max-w-screen-lg flex-col gap-4 px-4 px-4 md:flex-row">
+      <div
+        id="faq"
+        className="mx-auto my-12 flex max-w-screen-lg flex-col gap-4 px-4 px-4 md:flex-row"
+      >
         <div className="flex flex-col gap-3">
           <h2 className="text-6xl font-black tracking-tight">WHY US?</h2>
           <div className="space-y-4">
@@ -134,7 +137,7 @@ export default function BookNow() {
         />
       </div>
 
-      <div>
+      <div id="reviews">
         <div className="mx-auto my-14 flex max-w-screen-lg flex-col gap-4 px-4 md:flex-row">
           <Card>
             <CardContent className="flex flex-col justify-between space-y-3 px-8 py-12">
