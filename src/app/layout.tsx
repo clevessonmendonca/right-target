@@ -1,29 +1,29 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-import { GoogleAnalytics } from '@next/third-parties/google'
-import { Analytics } from '@vercel/analytics/react'
-import Script from 'next/script'
-import { Toaster } from '@/components/ui/sonner'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
+import { Toaster } from "@/components/ui/sonner";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
-const GTM_ID = 'GTM-KXCK2GK5'
+const GTM_ID = "GTM-KXCK2GK5";
 
 export const metadata: Metadata = {
-  title: 'Right Target - Cleaning Services',
+  title: "Right Target - Cleaning Services",
   description:
-    'Discover the exceptional cleaning services at Right Target. We specialize in providing professional and reliable cleaning solutions for homes and businesses. Elevate your living and working spaces with our experienced team and tailored cleaning packages. Your satisfaction is our priority. Contact us today for a cleaner, healthier environment!',
+    "Discover the exceptional cleaning services at Right Target. We specialize in providing professional and reliable cleaning solutions for homes and businesses. Elevate your living and working spaces with our experienced team and tailored cleaning packages. Your satisfaction is our priority. Contact us today for a cleaner, healthier environment!",
   icons: {
-    icon: '/favicon.png',
+    icon: "/favicon.png",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -102,7 +102,7 @@ fbq('track', 'PageView');
       />
       <Script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=AW-11139734703"
+        src="https://www.googletagmanager.com/gtag/js?id=G-79R1P6CNFF"
       ></Script>
       <Script
         dangerouslySetInnerHTML={{
@@ -110,7 +110,7 @@ fbq('track', 'PageView');
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'AW-11139734703');
+              gtag('config', 'G-79R1P6CNFF');
             `,
         }}
       />
@@ -155,5 +155,5 @@ fbq('track', 'PageView');
         </div>
       </body>
     </html>
-  )
+  );
 }
