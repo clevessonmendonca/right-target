@@ -11,9 +11,9 @@ export async function POST(req: NextRequest) {
     const body: FormSchema = await req.json()
 
     const data = await resend.emails.send({
-      from: 'New Budget <contact@righttargetservice.com>',
-      to: ['contact@righttargetservice.com'],
-      subject: 'Right Target',
+      from: 'Budget <onboarding@resend.dev>',
+      to: ['righttarget.contact@gmail.com'],
+      subject: 'New Budget',
       react: AdsEmailTemplete(body) as ReactElement,
     })
 
